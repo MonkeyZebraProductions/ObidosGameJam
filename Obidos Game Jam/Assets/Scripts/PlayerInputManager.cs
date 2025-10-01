@@ -32,7 +32,7 @@ public class PlayerInputManager : MonoBehaviour
         {
             var player = PlayerInput.Instantiate(playerPrefab, controlScheme: "Player 1 Keyboard", pairWithDevice: Keyboard.current);
 
-            player.transform.position = spawnPositions[index].position;
+            player.transform.position = spawnPositions[0].position;
             p1KeyboardJoined = true;
             gamePadjoined[index] = true;
             index++;
@@ -42,7 +42,7 @@ public class PlayerInputManager : MonoBehaviour
         {
             var player = PlayerInput.Instantiate(playerPrefab, controlScheme: "Player 2 Keyboard", pairWithDevice: Keyboard.current);
 
-            player.transform.position = spawnPositions[index].position;
+            player.transform.position = spawnPositions[1].position;
             p2KeyboardJoined = true;
             gamePadjoined[index] = true;
             index++;
