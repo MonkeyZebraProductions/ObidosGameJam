@@ -29,11 +29,16 @@ public class PressureLine : MonoBehaviour
         foreach (ContactPoint2D contactPoint in collision.contacts) 
         { 
             Vector2 hitNormal = contactPoint.normal;
-            startPosition = transform.position;
-            targetPosition = transform.position + new Vector3(hitNormal.x * moveDistance, 0, 0);
-            alpha = 0.0f;
+            SetMovePositions(hitNormal.x);
             //transform.position += new Vector3 (hitNormal.x*moveDistance,0,0);
         }
 
+    }
+
+    public void SetMovePositions(float xMovemnet)
+    {
+        startPosition = transform.position;
+        targetPosition = transform.position + new Vector3(xMovemnet * moveDistance, 0, 0);
+        alpha = 0.0f;
     }
 }
