@@ -16,6 +16,6 @@ public class Ball : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        Debug.Log(rb2D.linearVelocity.magnitude);
     }
 }
