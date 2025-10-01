@@ -25,7 +25,6 @@ public class Ball : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log(rb2D.linearVelocity);
         if (rb2D.linearVelocity.magnitude < minBallSpeed)
         {
             rb2D.linearVelocity = rb2D.linearVelocity.normalized * minBallSpeed;

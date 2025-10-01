@@ -35,6 +35,12 @@ public class PressureLine : MonoBehaviour
 
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        //End the Game
+        Debug.Log("End Game");
+    }
+
     public void SetMovePositions(float xMovemnet)
     {
         startPosition = transform.position;
