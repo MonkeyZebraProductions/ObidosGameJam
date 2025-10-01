@@ -13,6 +13,7 @@ public class PlayerInputManager : MonoBehaviour
     private bool[] gamePadjoined = {false, false};
 
     private int index;
+    private int gamePadIndex;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -27,7 +28,7 @@ public class PlayerInputManager : MonoBehaviour
             return;
         }
 
-        if (!p1KeyboardJoined && Keyboard.current.qKey.wasPressedThisFrame) 
+        if (!p1KeyboardJoined && Keyboard.current.leftShiftKey.wasPressedThisFrame) 
         {
             var player = PlayerInput.Instantiate(playerPrefab, controlScheme: "Player 1 Keyboard", pairWithDevice: Keyboard.current);
 
@@ -37,7 +38,7 @@ public class PlayerInputManager : MonoBehaviour
             index++;
         }
 
-        if (!p2KeyboardJoined && Keyboard.current.eKey.wasPressedThisFrame)
+        if (!p2KeyboardJoined && Keyboard.current.rightShiftKey.wasPressedThisFrame)
         {
             var player = PlayerInput.Instantiate(playerPrefab, controlScheme: "Player 2 Keyboard", pairWithDevice: Keyboard.current);
 
@@ -47,14 +48,15 @@ public class PlayerInputManager : MonoBehaviour
             index++;
         }
 
-        if(index<Gamepad.all.Count)
+        if(gamePadIndex<Gamepad.all.Count)
         {
-            if (!gamePadjoined[index] && Gamepad.all[index].buttonSouth.wasPressedThisFrame)
+            if (!gamePadjoined[index] && Gamepad.all[gamePadIndex].buttonSouth.wasPressedThisFrame)
             {
-                var player = PlayerInput.Instantiate(playerPrefab, controlScheme: "Gamepad", pairWithDevice: Gamepad.all[index]);
+                var player = PlayerInput.Instantiate(playerPrefab, controlScheme: "Gamepad", pairWithDevice: Gamepad.all[gamePadIndex]);
                 player.transform.position = spawnPositions[index].position;
                 gamePadjoined[index] = true;
                 index++;
+                gamePadIndex++;
             }
         }
      
