@@ -11,9 +11,13 @@ public class PressureLine : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+    }
+
+    private void FixedUpdate()
+    {
         if (alpha < 1.0f)
         {
-            transform.position = Vector3.Lerp(startPosition, targetPosition, Mathf.Pow(alpha,EaseOutValue));
+            transform.position = Vector3.Lerp(startPosition, targetPosition, Mathf.Pow(alpha, EaseOutValue));
             alpha += Time.deltaTime;
         }
     }
