@@ -354,7 +354,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PressureLine
   moveDistance: 1
-  EaseOutValue: 0.229
+  EaseOutValue: 0.4
   EndGameCanvas: {fileID: 0}
 --- !u!1 &3205923610564798928
 GameObject:
