@@ -13,9 +13,17 @@ public class BackWall : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (pressureLine != null) 
+        Ball ball = collision.gameObject.GetComponent<Ball>();
+        if (ball != null)
         {
-            pressureLine.SetMovePositions(moveLeft ? -1 : 1);
+            if (pressureLine != null && !ball.IsTripleBall()) 
+            {
+                pressureLine.SetMovePositions(moveLeft ? -1 : 1);
+            }
+            else if (pressureLine != null && ball.IsTripleBall())
+            {
+                ball.DestroyBall();
+            }
         }
     }
 }

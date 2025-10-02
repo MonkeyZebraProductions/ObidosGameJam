@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using System.Collections;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -8,26 +9,18 @@ public class PlayerMovement : MonoBehaviour
 
     //Component Variables
     private Rigidbody2D rb2D;
+    private float currentSpeed;
 
-    public float PlayerSpeed = 10;
+    public float PlayerSpeed = 10f;
+    public float SlowSpeed = 5f;
+    public float slowDuration = 5.0f;
 
     private void Awake()
     {
         //Assigns variables at start of Runtime
         playerInput = GetComponent<PlayerInput>();
         rb2D = GetComponent<Rigidbody2D>();
-    }
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        currentSpeed = PlayerSpeed;
     }
 
     private void FixedUpdate()
@@ -36,16 +29,24 @@ public class PlayerMovement : MonoBehaviour
         moveAction = playerInput.actions["Move"];
         Vector2 moveInput = moveAction.ReadValue<Vector2>();
 
-        rb2D.linearVelocityY = moveInput.y*PlayerSpeed;
+        rb2D.linearVelocityY = moveInput.y*currentSpeed;
     }
 
-    private void OnEnable()
+    public void SlowPlayer()
     {
-        
+        StopAllCoroutines();
+        currentSpeed = SlowSpeed;
+        StartCoroutine(ResetPlayerSpeed());
     }
 
-    private void OnDisable()
+    IEnumerator ResetPlayerSpeed()
     {
-        
+        yield return new WaitForSeconds(slowDuration);
+        ResetSpeed();
+    }
+
+    void ResetSpeed()
+    {
+        currentSpeed = PlayerSpeed;
     }
 }
