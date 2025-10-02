@@ -19,8 +19,8 @@ public class PressureLine : MonoBehaviour
     {
         if(alpha < 1.0f)
         {
-            transform.position = Vector3.Lerp(startPosition, targetPosition, Mathf.Pow(alpha,0.2f));
-            alpha += Time.deltaTime * 2;
+            transform.position = Vector3.Lerp(startPosition, targetPosition, Mathf.Pow(alpha,EaseOutValue));
+            alpha += Time.deltaTime;
         }
     }
 
