@@ -7,8 +7,14 @@ public class Ball : MonoBehaviour
     [SerializeField] private float AxisRatio = 5;
     [SerializeField] private float AngleSarpness = 0.3f;
     [SerializeField] private bool tripleBall = false;
+    [SerializeField] private string HitSoundName, ExplosionName;
     private float currentSpeed, minBallSpeed, maxBallSpeed;
+    private AudioManager audioManager;
 
+    private void Start()
+    {
+        audioManager = FindFirstObjectByType<AudioManager>();
+    }
     public void SetSpeed(float newSpeed)
     {
         currentSpeed = newSpeed;
@@ -77,6 +83,22 @@ public class Ball : MonoBehaviour
                 }
                 rb2D.linearVelocity = new Vector2(hitNormal.x*AxisRatio , yVelocity).normalized * currentSpeed;
             }
+        }
+        if(audioManager != null)
+        {
+            if(!audioManager.IsPlaying(HitSoundName))
+            {
+                audioManager.Play(HitSoundName);
+            }
+            else if (!audioManager.IsPlaying(HitSoundName + "1"))
+            {
+                audioManager.Play(HitSoundName + "1");
+            }
+            else if (!audioManager.IsPlaying(HitSoundName + "2"))
+            {
+                audioManager.Play(HitSoundName + "2");
+            }
+
         }
     }
 

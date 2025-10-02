@@ -112,11 +112,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Ball
   rb2D: {fileID: 2825172304915274072}
-  BallSpeed: 10
-  SlowBallSpeed: 5
-  slowDuration: 5
   AxisRatio: 5
+  AngleSarpness: 0.3
   tripleBall: 0
+  HitSoundName: Normal Hit
+  ExplosionName: 
 --- !u!1 &6560461278113548070
 GameObject:
   m_ObjectHideFlags: 0

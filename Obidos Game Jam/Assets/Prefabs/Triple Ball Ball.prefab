@@ -115,6 +115,8 @@ MonoBehaviour:
   AxisRatio: 5
   AngleSarpness: 0.3
   tripleBall: 1
+  HitSoundName: Normal Hit
+  ExplosionName: 
 --- !u!1 &6560461278113548070
 GameObject:
   m_ObjectHideFlags: 0

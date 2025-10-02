@@ -775,7 +775,7 @@ ParticleSystem:
   cullingMode: 0
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
-  emitterVelocityMode: 1
+  emitterVelocityMode: 0
   looping: 1
   prewarm: 0
   playOnAwake: 1
@@ -834,7 +834,7 @@ ParticleSystem:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-  moveWithTransform: 1
+  moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
   randomSeed: 0
@@ -1331,7 +1331,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     randomizeRotationDirection: 0
-    gravitySource: 0
+    gravitySource: 1
     maxNumParticles: 5000
     customEmitterVelocity: {x: 0, y: 0, z: 0}
     size3D: 0
@@ -5820,12 +5820,20 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3664148210104607946, guid: f571da8dcc95c394cbb7d759393a34a9, type: 3}
+      propertyPath: emitterVelocityMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3664148210104607946, guid: f571da8dcc95c394cbb7d759393a34a9, type: 3}
       propertyPath: ShapeModule.m_Scale.x
       value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 3664148210104607946, guid: f571da8dcc95c394cbb7d759393a34a9, type: 3}
       propertyPath: ShapeModule.m_Scale.y
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3664148210104607946, guid: f571da8dcc95c394cbb7d759393a34a9, type: 3}
+      propertyPath: InitialModule.gravitySource
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3664148210104607946, guid: f571da8dcc95c394cbb7d759393a34a9, type: 3}
       propertyPath: ShapeModule.radiusThickness
