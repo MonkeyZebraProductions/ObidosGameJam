@@ -39,7 +39,6 @@ public class BackWall : MonoBehaviour
         {
             if (pressureLine != null && !ball.IsTripleBall()) 
             {
-                currentRespawnTime += RespawnIncrease;
                 StartCoroutine(RespawnBall(ball.gameObject));
                 if (currentRespawnTime < RespawnTimeCap)
                 {

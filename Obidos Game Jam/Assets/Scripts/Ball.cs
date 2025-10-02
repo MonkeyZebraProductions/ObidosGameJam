@@ -60,7 +60,7 @@ public class Ball : MonoBehaviour
             }
         }
 
-        if (Mathf.Abs(rb2D.linearVelocity.y) < 0.1f * BallSpeed)
+        if (Mathf.Abs(rb2D.linearVelocity.y) < 0.1f * currentSpeed)
         {
             float yVelocity;
             foreach (ContactPoint2D contactPoint in collision.contacts)
