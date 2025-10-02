@@ -101,6 +101,7 @@ GameObject:
   - component: {fileID: 3269971620391443494}
   - component: {fileID: 1775758461954147954}
   - component: {fileID: 8991038758747094602}
+  - component: {fileID: 8093197039614958650}
   m_Layer: 0
   m_Name: Block Wall
   m_TagString: Untagged
@@ -172,3 +173,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81bb3276b41d8f740b09042aee1dc437, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BlockWall
+--- !u!114 &8093197039614958650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7578784246523825060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b731fa5de720f247bbae506763c19f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PowerUpMovement
+  speed: 3

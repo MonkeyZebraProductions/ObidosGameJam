@@ -1,6 +1,7 @@
 using Array2DEditor;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using System.Collections;
 
 public class BlockSpawner : MonoBehaviour
 {
@@ -10,8 +11,6 @@ public class BlockSpawner : MonoBehaviour
     [SerializeField] GameObject[] powerBlock;
     [SerializeField] Transform StartGidPosition;
     [SerializeField] Array2DBool InitialBlockPlacements;
-
-    //[SerializeField] Array2DBool BlockPowerupPattern;
 
     private Grid grid;
     private bool[,] startingCells;
@@ -25,12 +24,20 @@ public class BlockSpawner : MonoBehaviour
         grid = new Grid(GridWidth, GridHeight, cellSize, block, originPos);
 
         startingCells = InitialBlockPlacements.GetCells();
-        //InitialBlockSpawn();
     }
 
-    private void Update()
+    public void StartPowerUpsSpawn()
     {
+        StartCoroutine(SpawnRandomBlock());
+    }
 
+    IEnumerator SpawnRandomBlock()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(Random.Range(5, 10));
+            RandomBlockSpawn(powerBlock[Random.Range(0, powerBlock.Length)]);
+        }
     }
 
     public void InitialBlockSpawn()
@@ -75,6 +82,3 @@ public class BlockSpawner : MonoBehaviour
         prefabGO.name = $"({GridWidth - 1 - randX}, {GridHeight - 1 - randY})";
     }
 }
-
-
-

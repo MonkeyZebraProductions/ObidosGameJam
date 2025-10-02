@@ -101,6 +101,7 @@ GameObject:
   - component: {fileID: 3269971620391443494}
   - component: {fileID: 1775758461954147954}
   - component: {fileID: 4099695013672737011}
+  - component: {fileID: 2725234914799476202}
   m_Layer: 0
   m_Name: Triple Ball
   m_TagString: Untagged
@@ -173,3 +174,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TripleBall
   ballPrefab: {fileID: 2496756425301354146, guid: 97f05ff1922d97d4e87e48c140c3b4e4, type: 3}
+--- !u!114 &2725234914799476202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7578784246523825060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b731fa5de720f247bbae506763c19f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PowerUpMovement
+  speed: 3

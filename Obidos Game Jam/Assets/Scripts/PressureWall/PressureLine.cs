@@ -47,7 +47,7 @@ public class PressureLine : MonoBehaviour
         if (collision.tag == "DangerZone") 
         {
             EndGameCanvas.enabled = true;
-            endGameText.text = "Player " + (transform.position.x < 0 ? "1" : "2") + " Wins!";
+            endGameText.text = "Player " + (transform.position.x > 0 ? "1" : "2") + " Wins!";
             BackWall[] backWalls = FindObjectsByType<BackWall>(FindObjectsSortMode.None);
             foreach (BackWall wall in backWalls)
             {

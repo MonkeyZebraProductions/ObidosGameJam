@@ -4,8 +4,8 @@ public class Slow : MonoBehaviour
 {
     void OnTriggerEnter2D(Collider2D other)
     {
-        Ball ball = other.GetComponent<Ball>();
-        if (ball != null)
+        PlayerMovement paddle = other.GetComponent<PlayerMovement>();
+        if (paddle != null)
         {
             if (other.tag == "Player 1")
             {

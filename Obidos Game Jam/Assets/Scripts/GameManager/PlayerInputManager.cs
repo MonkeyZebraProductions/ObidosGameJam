@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class PlayerInputManager : MonoBehaviour
 {
@@ -60,6 +61,11 @@ public class PlayerInputManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Keyboard.current.FindKeyOnCurrentKeyboardLayout("r").wasPressedThisFrame)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
+
         if (Keyboard.current == null || index == 2)
         {
             if(!gameStart)
@@ -67,6 +73,7 @@ public class PlayerInputManager : MonoBehaviour
                 startScreenCountdown.gameObject.SetActive(true);
                 startScreenCountdown.StartCountown(this);
                 gameStart = true;
+                FindFirstObjectByType<BlockSpawner>().StartPowerUpsSpawn();
             }
             return;
         }
@@ -100,8 +107,8 @@ public class PlayerInputManager : MonoBehaviour
                 var player = PlayerInput.Instantiate(playerPrefab, controlScheme: "Gamepad", pairWithDevice: Gamepad.all[gamePadIndex]);
                 player.transform.position = spawnPositions[index].position;
                 gamePadjoined[index] = true;
-                index++;
                 player.tag = playerTags[index];
+                index++;
                 gamePadIndex++;
             }
         }

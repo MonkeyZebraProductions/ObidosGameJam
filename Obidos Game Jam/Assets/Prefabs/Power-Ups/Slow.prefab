@@ -101,6 +101,7 @@ GameObject:
   - component: {fileID: 3269971620391443494}
   - component: {fileID: 1775758461954147954}
   - component: {fileID: 1019843994707069427}
+  - component: {fileID: 6084636139848553724}
   m_Layer: 0
   m_Name: Slow
   m_TagString: Untagged
@@ -172,3 +173,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 820d627389e8ea54fb5eeeb22e20067d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Slow
+--- !u!114 &6084636139848553724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7578784246523825060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b731fa5de720f247bbae506763c19f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PowerUpMovement
+  speed: 3
