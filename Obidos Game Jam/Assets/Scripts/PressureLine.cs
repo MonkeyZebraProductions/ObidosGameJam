@@ -4,6 +4,7 @@ public class PressureLine : MonoBehaviour
 {
 
     [SerializeField] private float moveDistance = 1;
+    [SerializeField][Range(0.0f, 1.0f)] private float EaseOutValue;
     private Vector3 targetPosition, startPosition;
     private float alpha = 1.0f;
 
@@ -18,7 +19,7 @@ public class PressureLine : MonoBehaviour
     {
         if(alpha < 1.0f)
         {
-            transform.position = Vector3.Lerp(startPosition, targetPosition, alpha);
+            transform.position = Vector3.Lerp(startPosition, targetPosition, Mathf.Pow(alpha,0.2f));
             alpha += Time.deltaTime * 2;
         }
     }

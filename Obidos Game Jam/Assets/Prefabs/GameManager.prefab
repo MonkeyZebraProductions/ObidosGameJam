@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 794925273681230710}
   - component: {fileID: 6611551632927431598}
   - component: {fileID: 1891080073541796457}
+  - component: {fileID: 6603756953417552175}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -126,3 +127,18 @@ MonoBehaviour:
     - row: 0000010000000000
     - row: 0000010000000000
     - row: 0000010000000000
+--- !u!114 &6603756953417552175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1773259560799724182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74f648d4032f30e4aac16239fc16a774, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SpawnBalls
+  BallPrefab: {fileID: 3453330206927393166, guid: 841b79b50d7fa004ba635a43bba92c1e, type: 3}
+  P1BallSpawn: {fileID: 0}
+  P2BallSpawn: {fileID: 0}

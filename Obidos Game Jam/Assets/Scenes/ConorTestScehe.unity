@@ -1368,6 +1368,10 @@ PrefabInstance:
       propertyPath: m_ExcludeLayers.m_Bits
       value: 64
       objectReference: {fileID: 0}
+    - target: {fileID: 7160771784983095339, guid: 556a18cfda1dedb438b066c7f1abad98, type: 3}
+      propertyPath: EaseOutValue
+      value: 0.1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
