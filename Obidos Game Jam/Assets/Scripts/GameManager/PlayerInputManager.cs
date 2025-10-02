@@ -19,12 +19,19 @@ public class PlayerInputManager : MonoBehaviour
 
     private SpawnBalls spawnBalls;
     private BlockSpawner blockSpawner;
+
+    private AudioManager audioManager;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         spawnBalls = GetComponentInParent<SpawnBalls>();
         blockSpawner = GetComponentInParent<BlockSpawner>();
+        audioManager = GetComponentInParent<AudioManager>();
+        if (audioManager != null)
+        {
+            audioManager.Play("Music");
+        }
     }
 
     // Update is called once per frame

@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1891080073541796457}
   - component: {fileID: 6603756953417552175}
   - component: {fileID: 2119736626214097434}
+  - component: {fileID: 5130785012565372913}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -116,30 +117,30 @@ MonoBehaviour:
     gridSize: {x: 16, y: 24}
     cellSize: {x: 16, y: 16}
     cells:
+    - row: 00000000000000010000000000000000
+    - row: 00000000000000010000000000000000
+    - row: 00000000000000010000000000000000
+    - row: 00000000000000010000000000000000
+    - row: 00000000000000010000000000000000
+    - row: 00000000000000010000000000000000
     - row: 00000000000000000000000000000000
     - row: 00000000000000000000000000000000
     - row: 00000000000000000000000000000000
+    - row: 00000000000000010000000000000000
+    - row: 00000000000000010000000000000000
+    - row: 00000000000000010000000000000000
+    - row: 00000000000000010000000000000000
+    - row: 00000000000000010000000000000000
+    - row: 00000000000000010000000000000000
     - row: 00000000000000000000000000000000
     - row: 00000000000000000000000000000000
     - row: 00000000000000000000000000000000
-    - row: 00000000000000000000000000000000
-    - row: 00000000000000000000000000000000
-    - row: 00000000000000000000000000000000
-    - row: 00000000000000000000000000000000
-    - row: 00000000000000000000000000000000
-    - row: 00000000000000000000000000000000
-    - row: 00000000000000000000000000000000
-    - row: 00000000000000000000000000000000
-    - row: 00000000000000000000000000000000
-    - row: 00000000000000000000000000000000
-    - row: 00000000000000000000000000000000
-    - row: 00000000000000000000000000000000
-    - row: 00000000000000000000000000000000
-    - row: 00000000000000000000000000000000
-    - row: 00000000000000000000000000000000
-    - row: 00000000000000000000000000000000
-    - row: 00000000000000000000000000000000
-    - row: 00000000000000000000000000000000
+    - row: 00000000000000010000000000000000
+    - row: 00000000000000010000000000000000
+    - row: 00000000000000010000000000000000
+    - row: 00000000000000010000000000000000
+    - row: 00000000000000010000000000000000
+    - row: 00000000000000010000000000000000
 --- !u!114 &6603756953417552175
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -152,7 +153,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74f648d4032f30e4aac16239fc16a774, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpawnBalls
-  BallPrefab: {fileID: 3453330206927393166, guid: 841b79b50d7fa004ba635a43bba92c1e, type: 3}
+  BallPrefab: {fileID: 3453330206927393166, guid: 5c96949420cc4a2469e401f8a5152bea, type: 3}
   P1BallSpawn: {fileID: 0}
   P2BallSpawn: {fileID: 0}
   normalBallSpeed: 10
@@ -173,3 +174,50 @@ MonoBehaviour:
   TimeIncrement: 30
   MoveIncrement: 0.5
   pressureLine: {fileID: 0}
+--- !u!114 &5130785012565372913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1773259560799724182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfef6ee3d72287a4fa0b46a5eb2d6782, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AudioManager
+  effectsVolume: 1
+  musicVolume: 0.7
+  sounds:
+  - clipName: Normal Hit
+    clip: {fileID: 8300000, guid: 7b82c8f390ddc824590956b032b0798e, type: 3}
+    isMusic: 0
+    threeD: 0
+    mute: 0
+    loop: 0
+    ignorePause: 0
+    source: {fileID: 0}
+  - clipName: Normal Hit1
+    clip: {fileID: 8300000, guid: 7b82c8f390ddc824590956b032b0798e, type: 3}
+    isMusic: 0
+    threeD: 0
+    mute: 0
+    loop: 0
+    ignorePause: 0
+    source: {fileID: 0}
+  - clipName: Normal Hit2
+    clip: {fileID: 8300000, guid: 7b82c8f390ddc824590956b032b0798e, type: 3}
+    isMusic: 0
+    threeD: 0
+    mute: 0
+    loop: 0
+    ignorePause: 0
+    source: {fileID: 0}
+  - clipName: Music
+    clip: {fileID: 8300000, guid: 024de1f3d2a97bd4c8fd6134b4a577d4, type: 3}
+    isMusic: 1
+    threeD: 0
+    mute: 0
+    loop: 1
+    ignorePause: 0
+    source: {fileID: 0}
