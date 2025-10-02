@@ -41,7 +41,7 @@ public class BackWall : MonoBehaviour
     {
         Destroy(ball);
         yield return new WaitForSeconds(currentRespawnTime);
-        Ball newBall = Instantiate(BallPrefab, BallSpawn);
+        Ball newBall = Instantiate(BallPrefab, BallSpawn.position,Quaternion.identity);
         newBall.LaunchBall();
     }
 }

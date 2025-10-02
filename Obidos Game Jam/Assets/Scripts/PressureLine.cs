@@ -31,6 +31,7 @@ public class PressureLine : MonoBehaviour
             Vector2 hitNormal = contactPoint.normal;
             SetMovePositions(hitNormal.x);
             //transform.position += new Vector3 (hitNormal.x*moveDistance,0,0);
+            Debug.Log("Contact");
         }
 
     }
