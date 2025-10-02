@@ -2,22 +2,15 @@ using UnityEngine;
 
 public class PressureLine : MonoBehaviour
 {
-
     [SerializeField] private float moveDistance = 1;
     [SerializeField][Range(0.0f, 1.0f)] private float EaseOutValue;
     private Vector3 targetPosition, startPosition;
     private float alpha = 1.0f;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
     // Update is called once per frame
     void Update()
     {
-        if(alpha < 1.0f)
+        if (alpha < 1.0f)
         {
             transform.position = Vector3.Lerp(startPosition, targetPosition, Mathf.Pow(alpha,EaseOutValue));
             alpha += Time.deltaTime;
@@ -30,16 +23,13 @@ public class PressureLine : MonoBehaviour
         { 
             Vector2 hitNormal = contactPoint.normal;
             SetMovePositions(hitNormal.x);
-            //transform.position += new Vector3 (hitNormal.x*moveDistance,0,0);
-            Debug.Log("Contact");
         }
 
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        //End the Game
-        Debug.Log("End Game");
+        if (collision.tag == "DangerZone") Debug.Log("End Game");
     }
 
     public void SetMovePositions(float xMovemnet)

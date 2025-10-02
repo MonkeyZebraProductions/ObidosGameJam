@@ -4,10 +4,10 @@ using UnityEngine;
 public class BackWall : MonoBehaviour
 {
     private PressureLine pressureLine;
-    [SerializeField] private bool moveLeft;
     [SerializeField] private Ball BallPrefab;
     [SerializeField] private Transform BallSpawn;
-    [SerializeField] private float StartRespawnTime = 1.0f;
+    [SerializeField] private string PlayerTag;
+    [SerializeField] private float StartRespawnTime = 0.5f;
     [SerializeField] private float RespawnIncrease = 0.5f;
 
     private float currentRespawnTime;
@@ -26,9 +26,8 @@ public class BackWall : MonoBehaviour
         {
             if (pressureLine != null && !ball.IsTripleBall()) 
             {
-                //pressureLine.SetMovePositions(moveLeft ? -1 : 1);
-                StartCoroutine(RespawnBall(ball.gameObject));
                 currentRespawnTime += RespawnIncrease;
+                StartCoroutine(RespawnBall(ball.gameObject));
             }
             else if (pressureLine != null && ball.IsTripleBall())
             {
@@ -42,6 +41,9 @@ public class BackWall : MonoBehaviour
         Destroy(ball);
         yield return new WaitForSeconds(currentRespawnTime);
         Ball newBall = Instantiate(BallPrefab, BallSpawn.position,Quaternion.identity);
+        newBall.gameObject.tag = PlayerTag;
+        if (PlayerTag == "Player 1") newBall.SetSpeed(FindFirstObjectByType<SpawnBalls>().GetCurrentSpeedP1());
+        else if (PlayerTag == "Player 2") newBall.SetSpeed(FindFirstObjectByType<SpawnBalls>().GetCurrentSpeedP2());
         newBall.LaunchBall();
     }
 }

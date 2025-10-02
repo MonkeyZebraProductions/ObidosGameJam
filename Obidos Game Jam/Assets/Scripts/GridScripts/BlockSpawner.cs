@@ -1,12 +1,8 @@
 using Array2DEditor;
-using Unity.VisualScripting;
 using UnityEngine;
-using static UnityEngine.Rendering.ProbeAdjustmentVolume;
-
 
 public class BlockSpawner : MonoBehaviour
 {
-
     [SerializeField] int GridWidth = 1;
     [SerializeField] int GridHeight = 1;
     [SerializeField] GameObject block;
@@ -16,6 +12,7 @@ public class BlockSpawner : MonoBehaviour
     private Grid grid;
     private bool[,] startingCells;
     private float cellSize;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -25,17 +22,6 @@ public class BlockSpawner : MonoBehaviour
 
         startingCells = InitialBlockPlacements.GetCells();
         //InitialBlockSpawn();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
-    void SpawnBlocks()
-    {
-
     }
 
     public void InitialBlockSpawn()

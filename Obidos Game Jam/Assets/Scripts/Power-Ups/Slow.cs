@@ -9,17 +9,17 @@ public class Slow : MonoBehaviour
         {
             if (other.tag == "Player 1")
             {
+                FindFirstObjectByType<SpawnBalls>().SlowBalls("Player 2");
                 foreach (GameObject thing in GameObject.FindGameObjectsWithTag("Player 2"))
                 {
-                    if (thing.GetComponent<Ball>() != null) thing.GetComponent<Ball>().SlowBall();
                     if (thing.GetComponent<PlayerMovement>() != null) thing.GetComponent<PlayerMovement>().SlowPlayer();
                 }
             }
             else if (other.tag == "Player 2")
             {
+                FindFirstObjectByType<SpawnBalls>().SlowBalls("Player 1");
                 foreach (GameObject thing in GameObject.FindGameObjectsWithTag("Player 1"))
                 {
-                    if (thing.GetComponent<Ball>() != null) thing.GetComponent<Ball>().SlowBall();
                     if (thing.GetComponent<PlayerMovement>() != null) thing.GetComponent<PlayerMovement>().SlowPlayer();
                 }
             }
