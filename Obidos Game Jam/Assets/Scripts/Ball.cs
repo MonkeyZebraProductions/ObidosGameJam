@@ -12,7 +12,6 @@ public class Ball : MonoBehaviour
     void Start()
     {
         rb2D = GetComponent<Rigidbody2D>();
-        rb2D.AddForce(Random.insideUnitCircle.normalized * BallSpeed, ForceMode2D.Impulse);
         minBallSpeed = BallSpeed - 1.0f;
         maxBallSpeed = BallSpeed + 2.0f;
         LaunchBall();
