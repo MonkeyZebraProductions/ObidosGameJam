@@ -9,6 +9,8 @@ public class BlockSpawner : MonoBehaviour
     [SerializeField] Transform StartGidPosition;
     [SerializeField] Array2DBool InitialBlockPlacements;
 
+    //[SerializeField] Array2DBool BlockPowerupPattern;
+
     private Grid grid;
     private bool[,] startingCells;
     private float cellSize;
@@ -41,6 +43,15 @@ public class BlockSpawner : MonoBehaviour
                     mirrorPrefabGO.name = $"({x}, {y})";
                 }
             }
+        }
+    }
+
+    public void SpawnBlockPower(bool p2)
+    {
+        for(var y = 0; y < GridHeight; y++)
+        {
+            Vector2 spawnPos = grid.GetWorldPosition(p2 ? GridWidth - 1 : 0, y) + new Vector2(cellSize / 2, cellSize / 2);
+            var prefabGO = Instantiate(block, spawnPos, Quaternion.identity);
         }
     }
 }

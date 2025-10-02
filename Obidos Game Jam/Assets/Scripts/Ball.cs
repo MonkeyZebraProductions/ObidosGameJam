@@ -5,6 +5,7 @@ public class Ball : MonoBehaviour
 {
     [SerializeField] private Rigidbody2D rb2D;
     [SerializeField] private float AxisRatio = 5;
+    [SerializeField] private float AngleSarpness = 0.3f;
     [SerializeField] private bool tripleBall = false;
     private float currentSpeed, minBallSpeed, maxBallSpeed;
 
@@ -38,7 +39,7 @@ public class Ball : MonoBehaviour
             rb2D.linearVelocity = rb2D.linearVelocity.normalized * maxBallSpeed;
         }
 
-        if (Mathf.Abs(rb2D.linearVelocity.x) < 0.1f * currentSpeed)
+        if (Mathf.Abs(rb2D.linearVelocity.x) < AngleSarpness * currentSpeed)
         {
             float xVelocity;
             foreach (ContactPoint2D contactPoint in collision.contacts)
@@ -59,7 +60,7 @@ public class Ball : MonoBehaviour
             }
         }
 
-        if (Mathf.Abs(rb2D.linearVelocity.y) < 0.1f * currentSpeed)
+        if (Mathf.Abs(rb2D.linearVelocity.y) < 0.1f * BallSpeed)
         {
             float yVelocity;
             foreach (ContactPoint2D contactPoint in collision.contacts)
