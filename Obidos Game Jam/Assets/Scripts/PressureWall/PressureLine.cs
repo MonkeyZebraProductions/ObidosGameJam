@@ -3,7 +3,7 @@ using UnityEngine;
 public class PressureLine : MonoBehaviour
 {
 
-    [SerializeField] private float moveDistance = 1;
+    [SerializeField] public float moveDistance = 1;
     [SerializeField][Range(0.0f, 1.0f)] private float EaseOutValue;
     private Vector3 targetPosition, startPosition;
     private float alpha = 1.0f;
@@ -31,7 +31,6 @@ public class PressureLine : MonoBehaviour
             Vector2 hitNormal = contactPoint.normal;
             SetMovePositions(hitNormal.x);
             //transform.position += new Vector3 (hitNormal.x*moveDistance,0,0);
-            Debug.Log("Contact");
         }
 
     }
