@@ -1274,6 +1274,22 @@ PrefabInstance:
       propertyPath: StartGidPosition
       value: 
       objectReference: {fileID: 920265477}
+    - target: {fileID: 1891080073541796457, guid: abe89d36da0c040418968d50fde888f3, type: 3}
+      propertyPath: powerBlock.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1891080073541796457, guid: abe89d36da0c040418968d50fde888f3, type: 3}
+      propertyPath: 'powerBlock.Array.data[0]'
+      value: 
+      objectReference: {fileID: 8174149596296990042, guid: 0124c2e4566cfc446b2a0420a63ec5c6, type: 3}
+    - target: {fileID: 1891080073541796457, guid: abe89d36da0c040418968d50fde888f3, type: 3}
+      propertyPath: 'powerBlock.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2496756425301354146, guid: 841b79b50d7fa004ba635a43bba92c1e, type: 3}
+    - target: {fileID: 1891080073541796457, guid: abe89d36da0c040418968d50fde888f3, type: 3}
+      propertyPath: 'powerBlock.Array.data[2]'
+      value: 
+      objectReference: {fileID: 8174149596296990042, guid: 2e4169edb52883149ac7d5c760822734, type: 3}
     - target: {fileID: 2119736626214097434, guid: abe89d36da0c040418968d50fde888f3, type: 3}
       propertyPath: pressureLine
       value: 
