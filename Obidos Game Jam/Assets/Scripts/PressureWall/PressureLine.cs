@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 
 public class PressureLine : MonoBehaviour
@@ -5,9 +6,17 @@ public class PressureLine : MonoBehaviour
 
     [SerializeField] public float moveDistance = 1;
     [SerializeField][Range(0.0f, 1.0f)] private float EaseOutValue;
+    [SerializeField] private Canvas EndGameCanvas;
+
+    private TextMeshProUGUI endGameText;
     private Vector3 targetPosition, startPosition;
     private float alpha = 1.0f;
 
+    private void Start()
+    {
+        endGameText = EndGameCanvas.GetComponentInChildren<TextMeshProUGUI>();
+        EndGameCanvas.enabled = false;
+    }
     // Update is called once per frame
     void Update()
     {
@@ -35,7 +44,23 @@ public class PressureLine : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "DangerZone") Debug.Log("End Game");
+        if (collision.tag == "DangerZone") 
+        {
+            EndGameCanvas.enabled = true;
+            endGameText.text = "Player " + (transform.position.x < 0 ? "1" : "0") + " Wins!";
+            BackWall[] backWalls = FindObjectsByType<BackWall>(FindObjectsSortMode.None);
+            foreach (BackWall wall in backWalls)
+            {
+                Destroy(wall.gameObject);
+            }
+            Ball[] balls = FindObjectsByType<Ball>(FindObjectsSortMode.None);
+            foreach(Ball ball in balls)
+            {
+                Destroy(ball.gameObject);
+            }
+
+        }
+        
     }
 
     public void SetMovePositions(float xMovemnet)
