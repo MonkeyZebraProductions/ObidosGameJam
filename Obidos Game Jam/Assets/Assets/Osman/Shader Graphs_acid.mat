@@ -58,10 +58,10 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _E: 0.5
+    - _E: 1
     - _S1: 1
     - _S2: 1
-    - _Size: 1.5
+    - _Size: 0.5
     - _WaveCount: 1
     - _WaveFlowDirection: 1
     - _WaveS: 1
@@ -69,7 +69,7 @@ Material:
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Color2: {r: 1, g: 1, b: 1, a: 1}
-    - _Ecolor: {r: 0, g: 0.125, b: 0.5, a: 1}
-    - _Speed: {r: 1.5, g: 1.5, b: 0, a: 0}
+    - _Ecolor: {r: 0.2509804, g: 0.5019608, b: 0.4183007, a: 1}
+    - _Speed: {r: 0.5, g: 0.5, b: 0, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
