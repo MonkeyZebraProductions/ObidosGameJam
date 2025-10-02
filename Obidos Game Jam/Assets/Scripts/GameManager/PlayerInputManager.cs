@@ -19,7 +19,7 @@ public class PlayerInputManager : MonoBehaviour
 
     private SpawnBalls spawnBalls;
     private BlockSpawner blockSpawner;
-
+    private StartScreenCountdown startScreenCountdown;
     private AudioManager audioManager;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -28,9 +28,32 @@ public class PlayerInputManager : MonoBehaviour
         spawnBalls = GetComponentInParent<SpawnBalls>();
         blockSpawner = GetComponentInParent<BlockSpawner>();
         audioManager = GetComponentInParent<AudioManager>();
+        startScreenCountdown = FindFirstObjectByType<StartScreenCountdown>();
+        startScreenCountdown.gameObject.SetActive(false);
         if (audioManager != null)
         {
             audioManager.Play("Music");
+        }
+    }
+
+    public void SpawnAssets()
+    {
+        if (spawnBalls != null)
+        {
+            spawnBalls.BallSpawn();
+        }
+        else
+        {
+            Debug.LogError("Spall Balls Not Valid");
+        }
+
+        if (blockSpawner != null)
+        {
+            blockSpawner.InitialBlockSpawn();
+        }
+        else
+        {
+            Debug.LogError("Block Spawner Not Valid");
         }
     }
 
@@ -41,23 +64,8 @@ public class PlayerInputManager : MonoBehaviour
         {
             if(!gameStart)
             {
-                if (spawnBalls != null)
-                {
-                    spawnBalls.BallSpawn();
-                }
-                else 
-                {
-                    Debug.LogError("Spall Balls Not Valid");
-                }
-
-                if (blockSpawner != null)
-                {
-                    blockSpawner.InitialBlockSpawn();
-                }
-                else
-                {
-                    Debug.LogError("Block Spawner Not Valid");
-                }
+                startScreenCountdown.gameObject.SetActive(true);
+                startScreenCountdown.StartCountown(this);
                 gameStart = true;
             }
             return;

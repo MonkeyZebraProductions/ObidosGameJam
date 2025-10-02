@@ -153,7 +153,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74f648d4032f30e4aac16239fc16a774, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpawnBalls
-  BallPrefab: {fileID: 3453330206927393166, guid: 5c96949420cc4a2469e401f8a5152bea, type: 3}
+  BallPrefab: {fileID: 3453330206927393166, guid: 841b79b50d7fa004ba635a43bba92c1e, type: 3}
   P1BallSpawn: {fileID: 0}
   P2BallSpawn: {fileID: 0}
   normalBallSpeed: 10
