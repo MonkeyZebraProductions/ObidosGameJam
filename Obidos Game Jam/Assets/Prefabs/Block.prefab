@@ -178,3 +178,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b68276b4887d7be47890a0fb96f6cbd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Block
+  blockLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  checkRadius: 0.2

@@ -1046,7 +1046,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1891080073541796457, guid: abe89d36da0c040418968d50fde888f3, type: 3}
       propertyPath: 'InitialBlockPlacements.cells.Array.data[0].row.Array.data[15]'
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1891080073541796457, guid: abe89d36da0c040418968d50fde888f3, type: 3}
       propertyPath: 'InitialBlockPlacements.cells.Array.data[23].row.Array.data[0]'
@@ -1054,7 +1054,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1891080073541796457, guid: abe89d36da0c040418968d50fde888f3, type: 3}
       propertyPath: 'InitialBlockPlacements.cells.Array.data[23].row.Array.data[15]'
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2119736626214097434, guid: abe89d36da0c040418968d50fde888f3, type: 3}
       propertyPath: pressureLine
