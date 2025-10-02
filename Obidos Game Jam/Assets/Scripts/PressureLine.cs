@@ -1,11 +1,10 @@
 using UnityEngine;
-using UnityEngine.UIElements;
 
 public class PressureLine : MonoBehaviour
 {
 
     [SerializeField] private float moveDistance = 1;
-    private Vector3 targetPosition,startPosition;
+    private Vector3 targetPosition, startPosition;
     private float alpha = 1.0f;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -17,7 +16,7 @@ public class PressureLine : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(alpha<1.0f)
+        if(alpha < 1.0f)
         {
             transform.position = Vector3.Lerp(startPosition, targetPosition, alpha);
             alpha += Time.deltaTime * 2;

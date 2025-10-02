@@ -13,7 +13,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Awake()
     {
-        //Asigns variables at start of Runtime
+        //Assigns variables at start of Runtime
         playerInput = GetComponent<PlayerInput>();
         rb2D = GetComponent<Rigidbody2D>();
     }

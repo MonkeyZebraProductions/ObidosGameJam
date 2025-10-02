@@ -1,4 +1,3 @@
-using TMPro;
 using UnityEngine;
 
 public class Ball : MonoBehaviour
@@ -7,12 +6,13 @@ public class Ball : MonoBehaviour
 
     [SerializeField] private float BallSpeed = 10;
     [SerializeField] private float AxisRatio = 5;
-    private float minBallSpeed,maxBallSpeed;
+    private float minBallSpeed, maxBallSpeed;
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         rb2D = GetComponent<Rigidbody2D>();
-        rb2D.AddForce(Random.insideUnitCircle.normalized * BallSpeed,ForceMode2D.Impulse);
+        rb2D.AddForce(Random.insideUnitCircle.normalized * BallSpeed, ForceMode2D.Impulse);
         minBallSpeed = BallSpeed - 1.0f;
         maxBallSpeed = BallSpeed + 2.0f;
     }
@@ -71,7 +71,7 @@ public class Ball : MonoBehaviour
                 {
                     yVelocity = 1.0f;
                 }
-                rb2D.linearVelocity = new Vector2(hitNormal.x *AxisRatio , yVelocity).normalized * BallSpeed;
+                rb2D.linearVelocity = new Vector2(hitNormal.x*AxisRatio , yVelocity).normalized * BallSpeed;
             }
         }
     }

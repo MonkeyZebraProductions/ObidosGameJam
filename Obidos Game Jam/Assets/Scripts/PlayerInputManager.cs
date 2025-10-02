@@ -14,6 +14,7 @@ public class PlayerInputManager : MonoBehaviour
 
     private int index;
     private int gamePadIndex;
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -48,7 +49,7 @@ public class PlayerInputManager : MonoBehaviour
             index++;
         }
 
-        if(gamePadIndex<Gamepad.all.Count)
+        if(gamePadIndex < Gamepad.all.Count)
         {
             if (!gamePadjoined[index] && Gamepad.all[gamePadIndex].buttonSouth.wasPressedThisFrame)
             {
@@ -63,14 +64,13 @@ public class PlayerInputManager : MonoBehaviour
         //foreach (var gamePad in Gamepad.all)
         //{
 
-        //    if (!gamePadjoined[index] && gamePad.buttonSouth.wasPressedThisFrame )
+        //    if (!gamePadjoined[index] && gamePad.buttonSouth.wasPressedThisFrame)
         //    {
         //        var player = PlayerInput.Instantiate(playerPrefab, controlScheme: "Gamepad", pairWithDevice: gamePad);
         //        player.transform.position = spawnPositions[index].position;
         //        gamePadjoined[index] = true;
         //        index++;
         //    }
-
         //}
     }
 }
