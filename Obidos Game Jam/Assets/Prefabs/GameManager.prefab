@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5370032688466306421}
   - component: {fileID: 794925273681230710}
   - component: {fileID: 6611551632927431598}
+  - component: {fileID: 1891080073541796457}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -93,3 +94,35 @@ MonoBehaviour:
   spawnPositions:
   - {fileID: 0}
   - {fileID: 0}
+--- !u!114 &1891080073541796457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1773259560799724182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0de1c19d4708d0c4e8e70935285adeaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BlockSpawner
+  GridWidth: 16
+  GridHeight: 12
+  block: {fileID: 8174149596296990042, guid: 2e4169edb52883149ac7d5c760822734, type: 3}
+  StartGidPosition: {fileID: 0}
+  InitialBlockPlacements:
+    gridSize: {x: 8, y: 12}
+    cellSize: {x: 16, y: 16}
+    cells:
+    - row: 0000010000000000
+    - row: 0000010000000000
+    - row: 0000010000000000
+    - row: 0000000000000000
+    - row: 0000000000000000
+    - row: 0000000000000000
+    - row: 0000000000000000
+    - row: 0000000000000000
+    - row: 0000000000000000
+    - row: 0000010000000000
+    - row: 0000010000000000
+    - row: 0000010000000000
