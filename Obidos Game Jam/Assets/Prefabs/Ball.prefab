@@ -112,8 +112,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Ball
   rb2D: {fileID: 2825172304915274072}
-  AxisRatio: 2
-  AngleSarpness: 0.4
+  AxisRatio: 1.5
+  AngleSarpness: 0.35
   tripleBall: 0
   HitSoundName: Normal Hit
   ExplosionName: 
