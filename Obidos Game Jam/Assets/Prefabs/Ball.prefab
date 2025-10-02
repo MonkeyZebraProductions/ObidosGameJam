@@ -4950,7 +4950,8 @@ MonoBehaviour:
   BallSpeed: 10
   SlowBallSpeed: 5
   slowDuration: 5
-  AxisRatio: 5
+  AxisRatio: 2
+  AngleSarpness: 0.4
   tripleBall: 0
 --- !u!1 &3732597964986564893
 GameObject:
