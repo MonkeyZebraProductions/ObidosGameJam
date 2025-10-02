@@ -11,6 +11,7 @@ public class PlayerInputManager : MonoBehaviour
     private bool p1KeyboardJoined;
     private bool p2KeyboardJoined;
     private bool[] gamePadjoined = {false, false};
+    private string[] playerTags = {"Player 1", "Player 2"};
 
     private int index;
     private int gamePadIndex;
@@ -29,27 +30,29 @@ public class PlayerInputManager : MonoBehaviour
             return;
         }
 
-        if (!p1KeyboardJoined && Keyboard.current.leftShiftKey.wasPressedThisFrame) 
+        if (!p1KeyboardJoined && Keyboard.current.leftShiftKey.wasPressedThisFrame && index < 2) 
         {
             var player = PlayerInput.Instantiate(playerPrefab, controlScheme: "Player 1 Keyboard", pairWithDevice: Keyboard.current);
 
             player.transform.position = spawnPositions[0].position;
             p1KeyboardJoined = true;
             gamePadjoined[index] = true;
+            player.tag = playerTags[0];
             index++;
         }
 
-        if (!p2KeyboardJoined && Keyboard.current.rightShiftKey.wasPressedThisFrame)
+        if (!p2KeyboardJoined && Keyboard.current.rightShiftKey.wasPressedThisFrame && index < 2)
         {
             var player = PlayerInput.Instantiate(playerPrefab, controlScheme: "Player 2 Keyboard", pairWithDevice: Keyboard.current);
 
             player.transform.position = spawnPositions[1].position;
             p2KeyboardJoined = true;
             gamePadjoined[index] = true;
+            player.tag = playerTags[1];
             index++;
         }
 
-        if(gamePadIndex < Gamepad.all.Count)
+        if(gamePadIndex < Gamepad.all.Count && index < 2)
         {
             if (!gamePadjoined[index] && Gamepad.all[gamePadIndex].buttonSouth.wasPressedThisFrame)
             {
@@ -57,6 +60,7 @@ public class PlayerInputManager : MonoBehaviour
                 player.transform.position = spawnPositions[index].position;
                 gamePadjoined[index] = true;
                 index++;
+                player.tag = playerTags[index];
                 gamePadIndex++;
             }
         }

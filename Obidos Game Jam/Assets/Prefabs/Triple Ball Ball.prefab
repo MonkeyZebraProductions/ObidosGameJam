@@ -4849,7 +4849,7 @@ GameObject:
   - component: {fileID: 2825172304915274072}
   - component: {fileID: 3453330206927393166}
   m_Layer: 0
-  m_Name: Ball
+  m_Name: Triple Ball Ball
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4951,7 +4951,7 @@ MonoBehaviour:
   SlowBallSpeed: 5
   slowDuration: 5
   AxisRatio: 5
-  tripleBall: 0
+  tripleBall: 1
 --- !u!1 &3732597964986564893
 GameObject:
   m_ObjectHideFlags: 0
@@ -9870,7 +9870,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.5019608, g: 0.5019608, b: 0.5019608, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
