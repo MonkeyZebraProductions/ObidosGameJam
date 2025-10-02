@@ -38,7 +38,7 @@ public class BlockSpawner : MonoBehaviour
 
     }
 
-    void InitialBlockSpawn()
+    public void InitialBlockSpawn()
     {
         for (var y = 0; y < InitialBlockPlacements.GridSize.y; y++)
         {

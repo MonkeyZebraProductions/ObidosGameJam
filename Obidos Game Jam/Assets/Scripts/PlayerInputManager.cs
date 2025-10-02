@@ -15,11 +15,16 @@ public class PlayerInputManager : MonoBehaviour
 
     private int index;
     private int gamePadIndex;
+    private bool gameStart;
+
+    private SpawnBalls spawnBalls;
+    private BlockSpawner blockSpawner;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        spawnBalls = GetComponentInParent<SpawnBalls>();
+        blockSpawner = GetComponentInParent<BlockSpawner>();
     }
 
     // Update is called once per frame
@@ -27,6 +32,27 @@ public class PlayerInputManager : MonoBehaviour
     {
         if (Keyboard.current == null || index == 2)
         {
+            if(!gameStart)
+            {
+                if (spawnBalls != null)
+                {
+                    spawnBalls.BallSpawn();
+                }
+                else 
+                {
+                    Debug.LogError("Spall Balls Not Valid");
+                }
+
+                if (blockSpawner != null)
+                {
+                    blockSpawner.InitialBlockSpawn();
+                }
+                else
+                {
+                    Debug.LogError("Block Spawner Not Valid");
+                }
+                gameStart = true;
+            }
             return;
         }
 

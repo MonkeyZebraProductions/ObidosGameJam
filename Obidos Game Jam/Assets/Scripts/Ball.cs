@@ -14,8 +14,7 @@ public class Ball : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        rb2D.AddForce(Random.insideUnitCircle.normalized * BallSpeed, ForceMode2D.Impulse);
-        SetSpeed(BallSpeed);
+        //rb2D.AddForce(Random.insideUnitCircle.normalized * BallSpeed, ForceMode2D.Impulse);
     }
 
     public void SetSpeed(float newSpeed)
@@ -69,6 +68,7 @@ public class Ball : MonoBehaviour
     public void LaunchBall()
     {
         rb2D.AddForce(Random.insideUnitCircle.normalized * BallSpeed, ForceMode2D.Impulse);
+        SetSpeed(BallSpeed);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

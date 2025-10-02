@@ -25,7 +25,7 @@ public class Block : MonoBehaviour
     IEnumerator DestroyBlock()
     {
         blockCollider.enabled=false;
-        yield return new WaitForSeconds(1.0f);
+        yield return new WaitForSeconds(0.2f);
         Destroy(this.gameObject);
     }
 }
