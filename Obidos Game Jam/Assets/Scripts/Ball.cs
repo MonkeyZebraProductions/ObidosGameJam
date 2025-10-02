@@ -15,12 +15,18 @@ public class Ball : MonoBehaviour
         rb2D.AddForce(Random.insideUnitCircle.normalized * BallSpeed, ForceMode2D.Impulse);
         minBallSpeed = BallSpeed - 1.0f;
         maxBallSpeed = BallSpeed + 2.0f;
+        LaunchBall();
     }
 
     // Update is called once per frame
     void Update()
     {
         //Debug.Log(rb2D.linearVelocity.magnitude);
+    }
+
+    public void LaunchBall()
+    {
+        rb2D.AddForce(Random.insideUnitCircle.normalized * BallSpeed, ForceMode2D.Impulse);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
