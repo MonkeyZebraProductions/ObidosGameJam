@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Shader Graphs_UpDown
-  m_Shader: {fileID: -6465566751694194690, guid: a22a618d495937f46a7c27e73ca7f4fe, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: 57bfbbdfa3e788c4da07a8847ef23485, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -18,7 +18,8 @@ Material:
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
   stringTagMap: {}
-  disabledShaderPasses: []
+  disabledShaderPasses:
+  - MOTIONVECTORS
   m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
@@ -41,9 +42,14 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _Edge_With: 0.01
+    - _Noise_Scale: 30
+    - _QueueControl: 0
+    - _QueueOffset: 0
     - _Speedx_1: 0.05
     - _Speedy_1: 0.05
-    m_Colors: []
+    m_Colors:
+    - _Color: {r: 0, g: 10.68552, b: 16, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
 --- !u!114 &8432585778776059370
