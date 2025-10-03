@@ -15,7 +15,7 @@ public class TripleBall : MonoBehaviour
             GameObject ball2 = Instantiate(ballPrefab, other.transform.position + GetOffset(paddle.tag), Quaternion.identity);
             ball2.tag = paddle.tag;
             ball2.GetComponent<Ball>().SetSpeed(GetCorrectSpeed(paddle.tag));
-            Destroy(gameObject);
+            gameObject.GetComponent<PowerUpMovement>().DestroyEffect();
         }
     }
 

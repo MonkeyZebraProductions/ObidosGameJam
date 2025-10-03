@@ -8,7 +8,7 @@ public class BlockWall : MonoBehaviour
         if (paddle != null)
         {
             FindFirstObjectByType<BlockSpawner>().SpawnBlockPower(other.tag == "Player 1");
-            Destroy(gameObject);
+            gameObject.GetComponent<PowerUpMovement>().DestroyEffect();
         }
     }
 }

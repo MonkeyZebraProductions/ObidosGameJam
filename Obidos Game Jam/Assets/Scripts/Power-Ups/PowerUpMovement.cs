@@ -22,10 +22,16 @@ public class PowerUpMovement : MonoBehaviour
     void Update()
     {
         transform.position += direction * speed * Time.deltaTime;
+
+        if (Mathf.Abs(transform.position.x) > 15f)
+        {
+            Destroy(gameObject);
+        }
     }
 
-    void OnDestroy()
+    public void DestroyEffect()
     {
         Instantiate(destroyEffectPrefab, transform.position, Quaternion.identity);
+        Destroy(gameObject);
     }
 }

@@ -37,6 +37,11 @@ public class Ball : MonoBehaviour
         rb2D.AddForce(Random.insideUnitCircle.normalized * currentSpeed, ForceMode2D.Impulse);
     }
 
+    public void LaunchBall(Vector2 direction)
+    {
+        rb2D.AddForce(direction.normalized * currentSpeed, ForceMode2D.Impulse);
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.GetComponent<PressureLine>() != null)

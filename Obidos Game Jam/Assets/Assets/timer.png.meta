@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: e5bb5ba3c5e80114c989cc5c8720ed6f
+guid: 270defeb70e710f46a8dccd4cc3745c8
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6530188866573173129
-    second: R_Paddle_0
+      213: -7754988575891523622
+    second: timer_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,23 +100,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: R_Paddle_0
+      name: timer_0
       rect:
         serializedVersion: 2
-        x: 82
+        x: 0
         y: 0
-        width: 290
+        width: 512
         height: 512
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 77ef1b303db1065a0800000000000000
-      internalID: -6530188866573173129
+      spriteID: ad7f5c85afeb06490800000000000000
+      internalID: -7754988575891523622
       vertices: []
       indices: 
       edges: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: eb7380d71b4daee4896d6ae4f696ed55
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      R_Paddle_0: -6530188866573173129
+      timer_0: -7754988575891523622
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

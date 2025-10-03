@@ -1,6 +1,6 @@
 using System.Collections;
 using UnityEngine;
-using TMPro;
+using UnityEngine.UI;
 
 public class BackWall : MonoBehaviour
 {
@@ -11,28 +11,30 @@ public class BackWall : MonoBehaviour
     [SerializeField] private float StartRespawnTime = 0.5f;
     [SerializeField] private float RespawnIncrease = 0.5f;
     [SerializeField] private float RespawnTimeCap = 5.0f;
-    [SerializeField] private TextMeshProUGUI RespawnText;
+    [SerializeField] private Image timerImage;
+    [SerializeField] private GameObject directionIndicator;
     [SerializeField] private GameObject explosionEffect;
 
     private float currentRespawnTime,displayRespawnTime;
     private bool isCountdown;
+    private Vector2 respawnDirection;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         pressureLine = FindFirstObjectByType<PressureLine>();
         currentRespawnTime = StartRespawnTime;
-        RespawnText.enabled = false;
     }
 
     private void Update()
     {
         if (isCountdown)
         {
-            RespawnText.text = ( displayRespawnTime<1.0f ? "0":"") + displayRespawnTime.ToString("#.00");
+            timerImage.fillAmount = 1 - displayRespawnTime/currentRespawnTime;
             displayRespawnTime-=Time.deltaTime;
         }
     }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         Ball ball = collision.gameObject.GetComponent<Ball>();
@@ -57,7 +59,10 @@ public class BackWall : MonoBehaviour
     IEnumerator RespawnBall(GameObject ball)
     {
         Destroy(ball);
-        RespawnText.enabled = true;
+        respawnDirection = Random.insideUnitCircle.normalized;
+        directionIndicator.GetComponent<RectTransform>().rotation = Quaternion.Euler(0, 0, Mathf.Atan2(respawnDirection.y, respawnDirection.x) * Mathf.Rad2Deg);
+        directionIndicator.SetActive(true);
+        timerImage.fillAmount = 1;
         displayRespawnTime = currentRespawnTime;
         isCountdown = true;
         yield return new WaitForSeconds(currentRespawnTime);
@@ -65,8 +70,9 @@ public class BackWall : MonoBehaviour
         newBall.gameObject.tag = PlayerTag;
         if (PlayerTag == "Player 1") newBall.SetSpeed(FindFirstObjectByType<SpawnBalls>().GetCurrentSpeedP1());
         else if (PlayerTag == "Player 2") newBall.SetSpeed(FindFirstObjectByType<SpawnBalls>().GetCurrentSpeedP2());
-        newBall.LaunchBall();
-        RespawnText.enabled = false;
+        newBall.LaunchBall(respawnDirection);
+        timerImage.fillAmount = 0;
+        directionIndicator.SetActive(false);
         isCountdown = false;
     }
 }

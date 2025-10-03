@@ -8,6 +8,7 @@ public class PlayerInputManager : MonoBehaviour
 
     [SerializeField] private GameObject playerPrefab;
     [SerializeField] private Transform[] spawnPositions;
+    [SerializeField] private Sprite[] playerSprites;
 
     private bool p1KeyboardJoined;
     private bool p2KeyboardJoined;
@@ -83,6 +84,7 @@ public class PlayerInputManager : MonoBehaviour
             var player = PlayerInput.Instantiate(playerPrefab, controlScheme: "Player 1 Keyboard", pairWithDevice: Keyboard.current);
 
             player.transform.position = spawnPositions[0].position;
+            player.GetComponentInChildren<SpriteRenderer>().sprite = playerSprites[0];
             p1KeyboardJoined = true;
             gamePadjoined[index] = true;
             player.tag = playerTags[0];
@@ -94,6 +96,7 @@ public class PlayerInputManager : MonoBehaviour
             var player = PlayerInput.Instantiate(playerPrefab, controlScheme: "Player 2 Keyboard", pairWithDevice: Keyboard.current);
 
             player.transform.position = spawnPositions[1].position;
+            player.GetComponentInChildren<SpriteRenderer>().sprite = playerSprites[1];
             p2KeyboardJoined = true;
             gamePadjoined[index] = true;
             player.tag = playerTags[1];
@@ -106,6 +109,7 @@ public class PlayerInputManager : MonoBehaviour
             {
                 var player = PlayerInput.Instantiate(playerPrefab, controlScheme: "Gamepad", pairWithDevice: Gamepad.all[gamePadIndex]);
                 player.transform.position = spawnPositions[index].position;
+                player.GetComponentInChildren<SpriteRenderer>().sprite = playerSprites[index];
                 gamePadjoined[index] = true;
                 player.tag = playerTags[index];
                 index++;

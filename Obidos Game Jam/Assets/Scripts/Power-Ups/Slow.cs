@@ -25,7 +25,7 @@ public class Slow : MonoBehaviour
                     if (thing.GetComponent<PlayerMovement>() != null) thing.GetComponent<PlayerMovement>().SlowPlayer();
                 }
             }
-            Destroy(gameObject);
+            gameObject.GetComponent<PowerUpMovement>().DestroyEffect();
         }
     }
 }
