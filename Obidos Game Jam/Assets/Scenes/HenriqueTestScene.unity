@@ -219,6 +219,8 @@ MonoBehaviour:
   timerImage: {fileID: 5555907402872249848}
   directionIndicator: {fileID: 5555907402872249847}
   explosionEffect: {fileID: 7270197881341594295, guid: cd0755411b579f94e90fa69e15e7757c, type: 3}
+  respawnEffect: {fileID: 503023597104320067, guid: c78f7b676609c2144b8811815129719d, type: 3}
+  HitSoundName: Explosion
 --- !u!1001 &233094107
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -676,6 +678,8 @@ MonoBehaviour:
   timerImage: {fileID: 5555907402872249846}
   directionIndicator: {fileID: 5555907402872249845}
   explosionEffect: {fileID: 7270197881341594295, guid: cd0755411b579f94e90fa69e15e7757c, type: 3}
+  respawnEffect: {fileID: 503023597104320067, guid: c78f7b676609c2144b8811815129719d, type: 3}
+  HitSoundName: Explosion
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0

@@ -14,16 +14,20 @@ public class BackWall : MonoBehaviour
     [SerializeField] private Image timerImage;
     [SerializeField] private GameObject directionIndicator;
     [SerializeField] private GameObject explosionEffect;
+    [SerializeField] private GameObject respawnEffect;
+    [SerializeField] private string HitSoundName = "Explosion";
 
     private float currentRespawnTime,displayRespawnTime;
     private bool isCountdown;
     private Vector2 respawnDirection;
+    private AudioManager audioManager;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         pressureLine = FindFirstObjectByType<PressureLine>();
         currentRespawnTime = StartRespawnTime;
+        audioManager=FindFirstObjectByType<AudioManager>();
     }
 
     private void Update()
@@ -41,6 +45,21 @@ public class BackWall : MonoBehaviour
         if (ball != null)
         {
             Instantiate(explosionEffect, collision.contacts[0].point, Quaternion.identity);
+            if (audioManager != null)
+            {
+                if (!audioManager.IsPlaying(HitSoundName))
+                {
+                    audioManager.Play(HitSoundName);
+                }
+                else if (!audioManager.IsPlaying(HitSoundName + "1"))
+                {
+                    audioManager.Play(HitSoundName + "1");
+                }
+                else if (!audioManager.IsPlaying(HitSoundName + "2"))
+                {
+                    audioManager.Play(HitSoundName + "2");
+                }
+            }
             if (pressureLine != null && !ball.IsTripleBall()) 
             {
                 StartCoroutine(RespawnBall(ball.gameObject));
@@ -65,8 +84,10 @@ public class BackWall : MonoBehaviour
         timerImage.fillAmount = 1;
         displayRespawnTime = currentRespawnTime;
         isCountdown = true;
-        yield return new WaitForSeconds(currentRespawnTime);
-        Ball newBall = Instantiate(BallPrefab, BallSpawn.position,Quaternion.identity);
+        yield return new WaitForSeconds(currentRespawnTime - 0.45f);
+        Instantiate(respawnEffect, BallSpawn);
+        yield return new WaitForSeconds(0.45f);
+        Ball newBall = Instantiate(BallPrefab, BallSpawn.position, Quaternion.identity);
         newBall.gameObject.tag = PlayerTag;
         if (PlayerTag == "Player 1") newBall.SetSpeed(FindFirstObjectByType<SpawnBalls>().GetCurrentSpeedP1());
         else if (PlayerTag == "Player 2") newBall.SetSpeed(FindFirstObjectByType<SpawnBalls>().GetCurrentSpeedP2());

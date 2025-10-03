@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class PlayerInputManager : MonoBehaviour
 {
@@ -9,7 +10,8 @@ public class PlayerInputManager : MonoBehaviour
     [SerializeField] private GameObject playerPrefab;
     [SerializeField] private Transform[] spawnPositions;
     [SerializeField] private Sprite[] playerSprites;
-
+    [SerializeField] private Canvas startCanvas;
+    [SerializeField] private TextMeshProUGUI[] StartText;
     private bool p1KeyboardJoined;
     private bool p2KeyboardJoined;
     private bool[] gamePadjoined = {false, false};
@@ -52,11 +54,13 @@ public class PlayerInputManager : MonoBehaviour
         if (blockSpawner != null)
         {
             blockSpawner.InitialBlockSpawn();
+            blockSpawner.StartPowerUpsSpawn();
         }
         else
         {
             Debug.LogError("Block Spawner Not Valid");
         }
+
     }
 
     // Update is called once per frame
@@ -73,8 +77,8 @@ public class PlayerInputManager : MonoBehaviour
             {
                 startScreenCountdown.gameObject.SetActive(true);
                 startScreenCountdown.StartCountown(this);
+                startCanvas.enabled = false;
                 gameStart = true;
-                FindFirstObjectByType<BlockSpawner>().StartPowerUpsSpawn();
             }
             return;
         }
@@ -85,6 +89,7 @@ public class PlayerInputManager : MonoBehaviour
 
             player.transform.position = spawnPositions[0].position;
             player.GetComponentInChildren<SpriteRenderer>().sprite = playerSprites[0];
+            StartText[0].enabled = false;
             p1KeyboardJoined = true;
             gamePadjoined[index] = true;
             player.tag = playerTags[0];
@@ -97,6 +102,7 @@ public class PlayerInputManager : MonoBehaviour
 
             player.transform.position = spawnPositions[1].position;
             player.GetComponentInChildren<SpriteRenderer>().sprite = playerSprites[1];
+            StartText[1].enabled = false;
             p2KeyboardJoined = true;
             gamePadjoined[index] = true;
             player.tag = playerTags[1];
@@ -111,6 +117,7 @@ public class PlayerInputManager : MonoBehaviour
                 player.transform.position = spawnPositions[index].position;
                 player.GetComponentInChildren<SpriteRenderer>().sprite = playerSprites[index];
                 gamePadjoined[index] = true;
+                StartText[index].enabled = false;
                 player.tag = playerTags[index];
                 index++;
                 gamePadIndex++;

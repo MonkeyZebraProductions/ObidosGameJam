@@ -100,6 +100,10 @@ MonoBehaviour:
   playerSprites:
   - {fileID: -8112086744520682986, guid: 57b6bf854a2f0bd469dd0b7f5fc2666a, type: 3}
   - {fileID: -6530188866573173129, guid: e5bb5ba3c5e80114c989cc5c8720ed6f, type: 3}
+  startCanvas: {fileID: 0}
+  StartText:
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &1891080073541796457
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -220,5 +224,69 @@ MonoBehaviour:
     threeD: 0
     mute: 0
     loop: 1
+    ignorePause: 0
+    source: {fileID: 0}
+  - clipName: Explosion
+    clip: {fileID: 8300000, guid: 95531af7e58b1f640b0c43d5459f0b14, type: 3}
+    isMusic: 0
+    threeD: 0
+    mute: 0
+    loop: 0
+    ignorePause: 0
+    source: {fileID: 0}
+  - clipName: Explosion1
+    clip: {fileID: 8300000, guid: 95531af7e58b1f640b0c43d5459f0b14, type: 3}
+    isMusic: 0
+    threeD: 0
+    mute: 0
+    loop: 0
+    ignorePause: 0
+    source: {fileID: 0}
+  - clipName: Explosion2
+    clip: {fileID: 8300000, guid: 95531af7e58b1f640b0c43d5459f0b14, type: 3}
+    isMusic: 0
+    threeD: 0
+    mute: 0
+    loop: 0
+    ignorePause: 0
+    source: {fileID: 0}
+  - clipName: Hit Barrier
+    clip: {fileID: 8300000, guid: 7da391868ebddda4db7bb56178c47cda, type: 3}
+    isMusic: 0
+    threeD: 0
+    mute: 0
+    loop: 0
+    ignorePause: 0
+    source: {fileID: 0}
+  - clipName: Victory
+    clip: {fileID: 8300000, guid: aac1fbb5d2adf8243989b2315f2734a3, type: 3}
+    isMusic: 0
+    threeD: 0
+    mute: 0
+    loop: 0
+    ignorePause: 0
+    source: {fileID: 0}
+  - clipName: Powerup
+    clip: {fileID: 8300000, guid: 13baddf5d97f7694a8eae63fd1c8524c, type: 3}
+    isMusic: 0
+    threeD: 0
+    mute: 0
+    loop: 0
+    ignorePause: 0
+    source: {fileID: 0}
+  - clipName: Powerup1
+    clip: {fileID: 8300000, guid: 13baddf5d97f7694a8eae63fd1c8524c, type: 3}
+    isMusic: 0
+    threeD: 0
+    mute: 0
+    loop: 0
+    ignorePause: 0
+    source: {fileID: 0}
+  - clipName: Powerup2
+    clip: {fileID: 8300000, guid: 13baddf5d97f7694a8eae63fd1c8524c, type: 3}
+    isMusic: 0
+    threeD: 0
+    mute: 0
+    loop: 0
     ignorePause: 0
     source: {fileID: 0}
