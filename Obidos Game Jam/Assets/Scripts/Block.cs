@@ -3,13 +3,15 @@ using UnityEngine;
 
 public class Block : MonoBehaviour
 {
-    [SerializeField] private LayerMask blockLayer;
+    [SerializeField] LayerMask blockLayer;
     [SerializeField] float checkRadius = 0.5f;
     [SerializeField] GameObject powerUpPrefab;
     [SerializeField] GameObject destroyEffectPrefab;
+    [SerializeField] SpriteRenderer powerUpRenderer;
 
     private Collider2D blockCollider;
     private string ballThatHit;
+    private SpriteRenderer blockRenderer;
     
     void Start()
     {
@@ -24,6 +26,16 @@ public class Block : MonoBehaviour
         }
 
         blockCollider = GetComponent<Collider2D>();
+        blockRenderer = GetComponentInChildren<SpriteRenderer>();
+    }
+
+    void Update()
+    {
+        if (blockRenderer.material.GetFloat("_Dissolve") > -0.75f)
+        {
+            blockRenderer.material.SetFloat("_Dissolve", blockRenderer.material.GetFloat("_Dissolve") - 2*Time.deltaTime);
+            if (powerUpPrefab != null) powerUpRenderer.material.SetFloat("_Dissolve", blockRenderer.material.GetFloat("_Dissolve"));
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

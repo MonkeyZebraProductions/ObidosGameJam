@@ -57,7 +57,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: d736662c3a2350247b2e87f515662cbe, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -147,7 +147,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: d736662c3a2350247b2e87f515662cbe, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -307,3 +307,4 @@ MonoBehaviour:
   checkRadius: 0.2
   powerUpPrefab: {fileID: 7578784246523825060, guid: 593edd667e29b7641acc7bfe0dbed313, type: 3}
   destroyEffectPrefab: {fileID: 8491626652170428410, guid: c99e6e3d2d16f8d468f2f74bdcecb2ec, type: 3}
+  powerUpRenderer: {fileID: 4922070612899977993}
