@@ -192,7 +192,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AudioManager
   effectsVolume: 1
-  musicVolume: 0.7
+  musicVolume: 0.5
   sounds:
   - clipName: Normal Hit
     clip: {fileID: 8300000, guid: 7b82c8f390ddc824590956b032b0798e, type: 3}
@@ -284,6 +284,30 @@ MonoBehaviour:
     source: {fileID: 0}
   - clipName: Powerup2
     clip: {fileID: 8300000, guid: 13baddf5d97f7694a8eae63fd1c8524c, type: 3}
+    isMusic: 0
+    threeD: 0
+    mute: 0
+    loop: 0
+    ignorePause: 0
+    source: {fileID: 0}
+  - clipName: triple
+    clip: {fileID: 8300000, guid: 0bfcda2eb886120488b814b7c6834706, type: 3}
+    isMusic: 0
+    threeD: 0
+    mute: 0
+    loop: 0
+    ignorePause: 0
+    source: {fileID: 0}
+  - clipName: block
+    clip: {fileID: 8300000, guid: 0ed36ad489d272d468bb046569eec2a8, type: 3}
+    isMusic: 0
+    threeD: 0
+    mute: 0
+    loop: 0
+    ignorePause: 0
+    source: {fileID: 0}
+  - clipName: slow
+    clip: {fileID: 8300000, guid: 5412109d2489f534e922af7ca732ea16, type: 3}
     isMusic: 0
     threeD: 0
     mute: 0

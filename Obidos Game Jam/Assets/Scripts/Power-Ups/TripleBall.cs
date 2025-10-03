@@ -9,6 +9,7 @@ public class TripleBall : MonoBehaviour
         PlayerMovement paddle = other.GetComponent<PlayerMovement>();
         if (paddle != null)
         {
+            FindFirstObjectByType<AudioManager>().Play("triple");
             GameObject ball1 = Instantiate(ballPrefab, other.transform.position + GetOffset(paddle.tag), Quaternion.identity);
             ball1.tag = paddle.tag;
             ball1.GetComponent<Ball>().SetSpeed(GetCorrectSpeed(paddle.tag));

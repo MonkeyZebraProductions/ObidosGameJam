@@ -1,0 +1,663 @@
+fileFormatVersion: 2
+guid: 571dfa7e38527e24c8239640a2600841
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3394412362926700300
+    second: LogoCut_0
+  - first:
+      213: -1786847447505673422
+    second: LogoCut_1
+  - first:
+      213: 3439764993500559051
+    second: LogoCut_2
+  - first:
+      213: -8650532739866975732
+    second: LogoCut_3
+  - first:
+      213: -4161119119212814216
+    second: LogoCut_4
+  - first:
+      213: 8011612908514745145
+    second: LogoCut_5
+  - first:
+      213: -8323118867836790486
+    second: LogoCut_6
+  - first:
+      213: 2273567209684855658
+    second: LogoCut_7
+  - first:
+      213: -706859573937382934
+    second: LogoCut_8
+  - first:
+      213: -4030990912613006743
+    second: LogoCut_9
+  - first:
+      213: -5694779572837182999
+    second: LogoCut_10
+  - first:
+      213: -6766517715891072019
+    second: LogoCut_11
+  - first:
+      213: -304851787362532871
+    second: LogoCut_12
+  - first:
+      213: -4039849571435453065
+    second: LogoCut_13
+  - first:
+      213: -2276468580146042510
+    second: LogoCut_14
+  - first:
+      213: 2006560469706265517
+    second: LogoCut_15
+  - first:
+      213: 2753776453643685439
+    second: LogoCut_16
+  - first:
+      213: -7891135795680294030
+    second: LogoCut_17
+  - first:
+      213: -4301672453906905221
+    second: LogoCut_18
+  - first:
+      213: -8718154967024141129
+    second: LogoCut_19
+  - first:
+      213: 1743191497073195176
+    second: LogoCut_20
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: LogoCut_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1978
+        width: 398
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c07b0794f006b1f20800000000000000
+      internalID: 3394412362926700300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LogoCut_1
+      rect:
+        serializedVersion: 2
+        x: 503
+        y: 1978
+        width: 399
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2336c9fa6b7d337e0800000000000000
+      internalID: -1786847447505673422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LogoCut_2
+      rect:
+        serializedVersion: 2
+        x: 1005
+        y: 1978
+        width: 399
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc6bc6479008cbf20800000000000000
+      internalID: 3439764993500559051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LogoCut_3
+      rect:
+        serializedVersion: 2
+        x: 1507
+        y: 1978
+        width: 398
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c02a75a3e4223f780800000000000000
+      internalID: -8650532739866975732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LogoCut_4
+      rect:
+        serializedVersion: 2
+        x: 2008
+        y: 1978
+        width: 399
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 870eb37253cb046c0800000000000000
+      internalID: -4161119119212814216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LogoCut_5
+      rect:
+        serializedVersion: 2
+        x: 2510
+        y: 1978
+        width: 112
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93b94f13e77fe2f60800000000000000
+      internalID: 8011612908514745145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LogoCut_6
+      rect:
+        serializedVersion: 2
+        x: 2797
+        y: 1978
+        width: 112
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a299c3bcc775e7c80800000000000000
+      internalID: -8323118867836790486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LogoCut_7
+      rect:
+        serializedVersion: 2
+        x: 3012
+        y: 1978
+        width: 398
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6bed32d4555d8f10800000000000000
+      internalID: 2273567209684855658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LogoCut_8
+      rect:
+        serializedVersion: 2
+        x: 3513
+        y: 1978
+        width: 399
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae9d06d66fab036f0800000000000000
+      internalID: -706859573937382934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LogoCut_9
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 1640
+        width: 398
+        height: 289
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 962cfd04f1b0f08c0800000000000000
+      internalID: -4030990912613006743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LogoCut_10
+      rect:
+        serializedVersion: 2
+        x: 545
+        y: 1640
+        width: 399
+        height: 289
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e193e6962418f0b0800000000000000
+      internalID: -5694779572837182999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LogoCut_11
+      rect:
+        serializedVersion: 2
+        x: 1047
+        y: 1640
+        width: 399
+        height: 289
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de3dce9ecff7812a0800000000000000
+      internalID: -6766517715891072019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LogoCut_12
+      rect:
+        serializedVersion: 2
+        x: 1549
+        y: 1640
+        width: 399
+        height: 289
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f10d112ae2f4cbf0800000000000000
+      internalID: -304851787362532871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LogoCut_13
+      rect:
+        serializedVersion: 2
+        x: 2050
+        y: 1640
+        width: 399
+        height: 289
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 775639408329fe7c0800000000000000
+      internalID: -4039849571435453065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LogoCut_14
+      rect:
+        serializedVersion: 2
+        x: 2552
+        y: 1640
+        width: 399
+        height: 289
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 279ae0a33eb5860e0800000000000000
+      internalID: -2276468580146042510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LogoCut_15
+      rect:
+        serializedVersion: 2
+        x: 3054
+        y: 1640
+        width: 398
+        height: 289
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da3de21bd1cb8db10800000000000000
+      internalID: 2006560469706265517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LogoCut_16
+      rect:
+        serializedVersion: 2
+        x: 3555
+        y: 1640
+        width: 399
+        height: 289
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3e444e2811673620800000000000000
+      internalID: 2753776453643685439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LogoCut_17
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 14
+        width: 844
+        height: 1498
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27b4b188dcd0d7290800000000000000
+      internalID: -7891135795680294030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LogoCut_18
+      rect:
+        serializedVersion: 2
+        x: 1067
+        y: 14
+        width: 284
+        height: 1498
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b77cbc4c1b36d44c0800000000000000
+      internalID: -4301672453906905221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LogoCut_19
+      rect:
+        serializedVersion: 2
+        x: 1627
+        y: 14
+        width: 1032
+        height: 1498
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bcf7bd8f34e20780800000000000000
+      internalID: -8718154967024141129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LogoCut_20
+      rect:
+        serializedVersion: 2
+        x: 2934
+        y: 14
+        width: 1032
+        height: 1498
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a877864e6f013810800000000000000
+      internalID: 1743191497073195176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      LogoCut_0: 3394412362926700300
+      LogoCut_1: -1786847447505673422
+      LogoCut_10: -5694779572837182999
+      LogoCut_11: -6766517715891072019
+      LogoCut_12: -304851787362532871
+      LogoCut_13: -4039849571435453065
+      LogoCut_14: -2276468580146042510
+      LogoCut_15: 2006560469706265517
+      LogoCut_16: 2753776453643685439
+      LogoCut_17: -7891135795680294030
+      LogoCut_18: -4301672453906905221
+      LogoCut_19: -8718154967024141129
+      LogoCut_2: 3439764993500559051
+      LogoCut_20: 1743191497073195176
+      LogoCut_3: -8650532739866975732
+      LogoCut_4: -4161119119212814216
+      LogoCut_5: 8011612908514745145
+      LogoCut_6: -8323118867836790486
+      LogoCut_7: 2273567209684855658
+      LogoCut_8: -706859573937382934
+      LogoCut_9: -4030990912613006743
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -7,6 +7,7 @@ public class BlockWall : MonoBehaviour
         PlayerMovement paddle = other.GetComponent<PlayerMovement>();
         if (paddle != null)
         {
+            FindFirstObjectByType<AudioManager>().Play("block");
             FindFirstObjectByType<BlockSpawner>().SpawnBlockPower(other.tag == "Player 1");
             gameObject.GetComponent<PowerUpMovement>().DestroyEffect();
         }

@@ -7,6 +7,7 @@ public class Slow : MonoBehaviour
         PlayerMovement paddle = other.GetComponent<PlayerMovement>();
         if (paddle != null)
         {
+            FindFirstObjectByType<AudioManager>().Play("slow");
             if (other.tag == "Player 1")
             {
                 FindFirstObjectByType<SpawnBalls>().SlowBalls("Player 2");
