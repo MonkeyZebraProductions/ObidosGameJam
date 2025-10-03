@@ -55,4 +55,11 @@ public class Block : MonoBehaviour
         Instantiate(destroyEffectPrefab, transform.position, Quaternion.identity);
         Destroy(this.gameObject);
     }
+
+    public void RemoveBlock()
+    {
+        blockCollider.enabled = false;
+        Instantiate(destroyEffectPrefab, transform.position, Quaternion.identity);
+        Destroy(this.gameObject);
+    }
 }
