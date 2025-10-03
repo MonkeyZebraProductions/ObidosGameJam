@@ -15,11 +15,13 @@ public class PressureLine : MonoBehaviour
     private Vector3 targetPosition, startPosition;
     private float alpha = 1.0f;
     private Coroutine resetP1Coroutine, resetP2Coroutine;
+    private AudioManager audioManager;
 
     private void Start()
     {
         endGameText = EndGameCanvas.GetComponentInChildren<TextMeshProUGUI>();
         EndGameCanvas.enabled = false;
+        audioManager = FindFirstObjectByType<AudioManager>();
     }
     // Update is called once per frame
     void Update()
@@ -42,6 +44,10 @@ public class PressureLine : MonoBehaviour
             Vector2 hitNormal = contactPoint.normal;
             SetMovePositions(hitNormal.x);
             //transform.position += new Vector3 (hitNormal.x*moveDistance,0,0);
+            if(audioManager != null)
+            {
+                audioManager.Play("Hit Barrier");
+            }
         }
 
     }
@@ -62,7 +68,10 @@ public class PressureLine : MonoBehaviour
             {
                 Destroy(ball.gameObject);
             }
-
+            if (audioManager != null)
+            {
+                audioManager.Play("Victory");
+            }
         }
         
     }
