@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &897575458351738530
 Transform:
   m_ObjectHideFlags: 0
@@ -223,7 +223,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0.7529412, g: 1, b: 0.5019608, a: 1}
+      maxColor: {r: 1, g: 0.85882354, b: 0.9529412, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -5128,8 +5128,8 @@ ParticleSystem:
     startColor:
       serializedVersion: 2
       minMaxState: 2
-      minColor: {r: 0.7529412, g: 1, b: 0.5, a: 0.24313726}
-      maxColor: {r: 0.7529412, g: 1, b: 0.5, a: 1}
+      minColor: {r: 1, g: 0.50980395, b: 0.9647059, a: 0.24313726}
+      maxColor: {r: 1, g: 0.85882354, b: 0.9529412, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -9833,7 +9833,7 @@ GameObject:
   - component: {fileID: 3640298764134052769}
   - component: {fileID: 5535515322978959595}
   m_Layer: 0
-  m_Name: Green Impact
+  m_Name: Pink Impact
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10112,7 +10112,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 0
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -14757,7 +14757,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7907852396081779950
 Transform:
   m_ObjectHideFlags: 0
@@ -14963,7 +14963,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0.7529412, g: 1, b: 0.5, a: 1}
+      maxColor: {r: 1, g: 0.85882354, b: 0.9529412, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -19957,8 +19957,8 @@ ParticleSystem:
     startColor:
       serializedVersion: 2
       minMaxState: 2
-      minColor: {r: 0.7529412, g: 1, b: 0.5, a: 0.22745098}
-      maxColor: {r: 0.7529412, g: 1, b: 0.5019608, a: 0.0627451}
+      minColor: {r: 1, g: 0.50980395, b: 0.9647059, a: 0.22745098}
+      maxColor: {r: 1, g: 0.85882354, b: 0.9529412, a: 0.0627451}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
