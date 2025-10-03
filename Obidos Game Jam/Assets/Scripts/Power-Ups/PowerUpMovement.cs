@@ -3,6 +3,7 @@ using UnityEngine;
 public class PowerUpMovement : MonoBehaviour
 {
     [SerializeField] private float speed = 5f;
+    [SerializeField] private GameObject destroyEffectPrefab;
 
     private Vector3 direction = Vector3.zero;
 
@@ -21,5 +22,10 @@ public class PowerUpMovement : MonoBehaviour
     void Update()
     {
         transform.position += direction * speed * Time.deltaTime;
+    }
+
+    void OnDestroy()
+    {
+        Instantiate(destroyEffectPrefab, transform.position, Quaternion.identity);
     }
 }

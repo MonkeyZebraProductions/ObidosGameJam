@@ -117,6 +117,8 @@ MonoBehaviour:
   tripleBall: 0
   HitSoundName: Normal Hit
   ExplosionName: 
+  hitEffectPrefab: {fileID: 6475401106310449740, guid: ac4135e42d6354c40a0a831ce5a4d862, type: 3}
+  pressureLineHitPrefab: {fileID: 8472670672916346054, guid: c58d27a8571c44f43a36b8305158fab1, type: 3}
 --- !u!1 &6560461278113548070
 GameObject:
   m_ObjectHideFlags: 0

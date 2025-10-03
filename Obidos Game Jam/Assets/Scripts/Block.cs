@@ -6,6 +6,7 @@ public class Block : MonoBehaviour
     [SerializeField] private LayerMask blockLayer;
     [SerializeField] float checkRadius = 0.5f;
     [SerializeField] GameObject powerUpPrefab;
+    [SerializeField] GameObject destroyEffectPrefab;
 
     private Collider2D blockCollider;
     private string ballThatHit;
@@ -28,18 +29,18 @@ public class Block : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         ballThatHit = collision.gameObject.tag;
-        StartCoroutine(DestroyBlock());
+        DestroyBlock();
     }
 
-    IEnumerator DestroyBlock()
+    void DestroyBlock()
     {
-        blockCollider.enabled=false;
-        yield return new WaitForSeconds(0.2f);
+        blockCollider.enabled = false;
         if (powerUpPrefab != null)
         {
             GameObject powerup = Instantiate(powerUpPrefab, transform.position, Quaternion.identity);
             powerup.GetComponent<PowerUpMovement>().SetDirection(ballThatHit);
         }
+        Instantiate(destroyEffectPrefab, transform.position, Quaternion.identity);
         Destroy(this.gameObject);
     }
 }

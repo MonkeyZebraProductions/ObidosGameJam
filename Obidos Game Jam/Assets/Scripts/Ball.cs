@@ -8,6 +8,10 @@ public class Ball : MonoBehaviour
     [SerializeField] private float AngleSarpness = 0.3f;
     [SerializeField] private bool tripleBall = false;
     [SerializeField] private string HitSoundName, ExplosionName;
+    [SerializeField] private GameObject hitEffectPrefab;
+    [SerializeField] private GameObject pressureLineHitPrefab;
+
+
     private float currentSpeed, minBallSpeed, maxBallSpeed;
     private AudioManager audioManager;
 
@@ -35,6 +39,15 @@ public class Ball : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        if (collision.gameObject.GetComponent<PressureLine>() != null)
+        {
+            Instantiate(pressureLineHitPrefab, collision.contacts[0].point, Quaternion.identity);
+        }
+        else if (collision.gameObject.GetComponent<BackWall>() == null)
+        {
+            Instantiate(hitEffectPrefab, collision.contacts[0].point, Quaternion.identity);
+        }
+
         if (rb2D.linearVelocity.magnitude < minBallSpeed)
         {
             rb2D.linearVelocity = rb2D.linearVelocity.normalized * minBallSpeed;

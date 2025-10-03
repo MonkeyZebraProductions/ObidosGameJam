@@ -117,6 +117,8 @@ MonoBehaviour:
   tripleBall: 1
   HitSoundName: Normal Hit
   ExplosionName: 
+  hitEffectPrefab: {fileID: 6475401106310449740, guid: ac4135e42d6354c40a0a831ce5a4d862, type: 3}
+  pressureLineHitPrefab: {fileID: 8472670672916346054, guid: c58d27a8571c44f43a36b8305158fab1, type: 3}
 --- !u!1 &6560461278113548070
 GameObject:
   m_ObjectHideFlags: 0
@@ -144,7 +146,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.4, y: 0.4, z: 1}
+  m_LocalScale: {x: 0.18, y: 0.18, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3433767845937694856}
@@ -196,8 +198,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 0.5019608, g: 0.5019608, b: 0.5019608, a: 1}
+  m_Sprite: {fileID: 337019552371571648, guid: 5cd720f695f31cc498572251ca3fae8e, type: 3}
+  m_Color: {r: 0.8214092, g: 0, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

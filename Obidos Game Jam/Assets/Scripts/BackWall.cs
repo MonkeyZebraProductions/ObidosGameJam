@@ -12,6 +12,7 @@ public class BackWall : MonoBehaviour
     [SerializeField] private float RespawnIncrease = 0.5f;
     [SerializeField] private float RespawnTimeCap = 5.0f;
     [SerializeField] private TextMeshProUGUI RespawnText;
+    [SerializeField] private GameObject explosionEffect;
 
     private float currentRespawnTime,displayRespawnTime;
     private bool isCountdown;
@@ -28,7 +29,7 @@ public class BackWall : MonoBehaviour
     {
         if (isCountdown)
         {
-            RespawnText.text = ( displayRespawnTime<1.0f ? "0":"") + displayRespawnTime.ToString("#.00") + "s";
+            RespawnText.text = ( displayRespawnTime<1.0f ? "0":"") + displayRespawnTime.ToString("#.00");
             displayRespawnTime-=Time.deltaTime;
         }
     }
@@ -37,6 +38,7 @@ public class BackWall : MonoBehaviour
         Ball ball = collision.gameObject.GetComponent<Ball>();
         if (ball != null)
         {
+            Instantiate(explosionEffect, collision.contacts[0].point, Quaternion.identity);
             if (pressureLine != null && !ball.IsTripleBall()) 
             {
                 StartCoroutine(RespawnBall(ball.gameObject));

@@ -1310,53 +1310,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 790895487550358880, guid: 556a18cfda1dedb438b066c7f1abad98, type: 3}
-      propertyPath: m_fontAsset
-      value: 
-      objectReference: {fileID: 11400000, guid: c59dcdb7d97477b479743a657dd1e136, type: 2}
-    - target: {fileID: 790895487550358880, guid: 556a18cfda1dedb438b066c7f1abad98, type: 3}
-      propertyPath: m_fontColor.b
-      value: 0.7882353
-      objectReference: {fileID: 0}
-    - target: {fileID: 790895487550358880, guid: 556a18cfda1dedb438b066c7f1abad98, type: 3}
-      propertyPath: m_fontColor.g
-      value: 0.69803923
-      objectReference: {fileID: 0}
-    - target: {fileID: 790895487550358880, guid: 556a18cfda1dedb438b066c7f1abad98, type: 3}
-      propertyPath: m_fontColor.r
-      value: 0.45882353
-      objectReference: {fileID: 0}
-    - target: {fileID: 790895487550358880, guid: 556a18cfda1dedb438b066c7f1abad98, type: 3}
-      propertyPath: m_sharedMaterial
-      value: 
-      objectReference: {fileID: -6131664358168929793, guid: c59dcdb7d97477b479743a657dd1e136, type: 2}
-    - target: {fileID: 790895487550358880, guid: 556a18cfda1dedb438b066c7f1abad98, type: 3}
-      propertyPath: m_fontColor32.rgba
-      value: 4291408501
-      objectReference: {fileID: 0}
-    - target: {fileID: 790895487550358880, guid: 556a18cfda1dedb438b066c7f1abad98, type: 3}
-      propertyPath: m_hasFontAssetChanged
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 975345495489301731, guid: 556a18cfda1dedb438b066c7f1abad98, type: 3}
-      propertyPath: m_Color.a
-      value: 0.12941177
-      objectReference: {fileID: 0}
-    - target: {fileID: 975345495489301731, guid: 556a18cfda1dedb438b066c7f1abad98, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: 2df3bdfbbd8a7a5408959111e96c503e, type: 2}
     - target: {fileID: 1167548299771128161, guid: 556a18cfda1dedb438b066c7f1abad98, type: 3}
       propertyPath: m_Name
       value: PressureLine
-      objectReference: {fileID: 0}
-    - target: {fileID: 3631227170397235153, guid: 556a18cfda1dedb438b066c7f1abad98, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -190
-      objectReference: {fileID: 0}
-    - target: {fileID: 3631227170397235153, guid: 556a18cfda1dedb438b066c7f1abad98, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -0.0000076294
       objectReference: {fileID: 0}
     - target: {fileID: 4078318746528163280, guid: 556a18cfda1dedb438b066c7f1abad98, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1398,42 +1354,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4810990889003379523, guid: 556a18cfda1dedb438b066c7f1abad98, type: 3}
-      propertyPath: m_fontAsset
-      value: 
-      objectReference: {fileID: 11400000, guid: c59dcdb7d97477b479743a657dd1e136, type: 2}
-    - target: {fileID: 4810990889003379523, guid: 556a18cfda1dedb438b066c7f1abad98, type: 3}
-      propertyPath: m_fontColor.b
-      value: 0.74509805
-      objectReference: {fileID: 0}
-    - target: {fileID: 4810990889003379523, guid: 556a18cfda1dedb438b066c7f1abad98, type: 3}
-      propertyPath: m_fontColor.g
-      value: 0.5686275
-      objectReference: {fileID: 0}
-    - target: {fileID: 4810990889003379523, guid: 556a18cfda1dedb438b066c7f1abad98, type: 3}
-      propertyPath: m_sharedMaterial
-      value: 
-      objectReference: {fileID: -6131664358168929793, guid: c59dcdb7d97477b479743a657dd1e136, type: 2}
-    - target: {fileID: 4810990889003379523, guid: 556a18cfda1dedb438b066c7f1abad98, type: 3}
-      propertyPath: m_fontColor32.rgba
-      value: 4290679295
-      objectReference: {fileID: 0}
-    - target: {fileID: 4810990889003379523, guid: 556a18cfda1dedb438b066c7f1abad98, type: 3}
-      propertyPath: m_hasFontAssetChanged
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6043759809917196619, guid: 556a18cfda1dedb438b066c7f1abad98, type: 3}
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 519420031}
-    - target: {fileID: 8274486944462021686, guid: 556a18cfda1dedb438b066c7f1abad98, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 190
-      objectReference: {fileID: 0}
-    - target: {fileID: 8274486944462021686, guid: 556a18cfda1dedb438b066c7f1abad98, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -0.0000076294
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

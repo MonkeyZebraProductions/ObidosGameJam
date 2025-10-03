@@ -1,16 +1,20 @@
 using TMPro;
 using UnityEngine;
+using System.Collections;
 
 public class PressureLine : MonoBehaviour
 {
-
     [SerializeField] public float moveDistance = 1;
     [SerializeField][Range(0.0f, 1.0f)] private float EaseOutValue;
     [SerializeField] private Canvas EndGameCanvas;
+    [SerializeField] private GameObject slowPlayer1;
+    [SerializeField] private GameObject slowPlayer2;
+    [SerializeField] private float slowDuration = 5.0f;
 
     private TextMeshProUGUI endGameText;
     private Vector3 targetPosition, startPosition;
     private float alpha = 1.0f;
+    private Coroutine resetP1Coroutine, resetP2Coroutine;
 
     private void Start()
     {
@@ -68,5 +72,31 @@ public class PressureLine : MonoBehaviour
         startPosition = transform.position;
         targetPosition = transform.position + new Vector3(xMovemnet * moveDistance, 0, 0);
         alpha = 0.0f;
+    }
+
+    public void SetSlowPlayer1()
+    {
+        if (resetP1Coroutine != null) StopCoroutine(resetP1Coroutine);
+        resetP1Coroutine = StartCoroutine("ResetSlowPlayer1");
+        slowPlayer1.SetActive(true);
+    }
+
+    public void SetSlowPlayer2()
+    {
+        if (resetP2Coroutine != null) StopCoroutine(resetP2Coroutine);
+        resetP2Coroutine = StartCoroutine("ResetSlowPlayer2");
+        slowPlayer2.SetActive(true);
+    }
+
+    IEnumerator ResetSlowPlayer1()
+    {
+        yield return new WaitForSeconds(slowDuration);
+        slowPlayer1.SetActive(false);
+    }
+
+    IEnumerator ResetSlowPlayer2()
+    {
+        yield return new WaitForSeconds(slowDuration);
+        slowPlayer2.SetActive(false);
     }
 }
