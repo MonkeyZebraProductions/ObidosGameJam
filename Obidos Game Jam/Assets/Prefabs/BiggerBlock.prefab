@@ -79,7 +79,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 2537882373423050008, guid: 855f75f533aa511418270481a35657ff, type: 3}
+  m_Sprite: {fileID: -2829844950331721288, guid: bc6955038bc398148ae7786410992174, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -216,3 +216,4 @@ MonoBehaviour:
   checkRadius: 0.2
   powerUpPrefab: {fileID: 0}
   destroyEffectPrefab: {fileID: 8491626652170428410, guid: c99e6e3d2d16f8d468f2f74bdcecb2ec, type: 3}
+  powerUpRenderer: {fileID: 0}
