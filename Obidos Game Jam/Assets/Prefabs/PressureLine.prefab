@@ -314,8 +314,8 @@ MonoBehaviour:
   moveDistance: 1
   EaseOutValue: 0.4
   EndGameCanvas: {fileID: 0}
-  slowPlayer1: {fileID: 6241103989045410573}
-  slowPlayer2: {fileID: 4956952192891074057}
+  slowPlayer1: {fileID: 1558015802573992536}
+  slowPlayer2: {fileID: 3205923610564798928}
   slowDuration: 5
 --- !u!1 &1465223380435015617
 GameObject:
@@ -2034,11 +2034,6 @@ PrefabInstance:
       addedObject: {fileID: 6192265420372065029}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8946e62d89e36e9449c8b9e92eba8fc9, type: 3}
---- !u!1 &6241103989045410573 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3536986080484332858, guid: 8946e62d89e36e9449c8b9e92eba8fc9, type: 3}
-  m_PrefabInstance: {fileID: 7460561445358808631}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6241103989045410574 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3536986080484332857, guid: 8946e62d89e36e9449c8b9e92eba8fc9, type: 3}
@@ -2160,11 +2155,6 @@ PrefabInstance:
       addedObject: {fileID: 3842728802253835504}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8946e62d89e36e9449c8b9e92eba8fc9, type: 3}
---- !u!1 &4956952192891074057 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3536986080484332858, guid: 8946e62d89e36e9449c8b9e92eba8fc9, type: 3}
-  m_PrefabInstance: {fileID: 8493586415670043443}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4956952192891074058 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3536986080484332857, guid: 8946e62d89e36e9449c8b9e92eba8fc9, type: 3}

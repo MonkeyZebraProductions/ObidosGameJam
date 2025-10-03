@@ -1516,6 +1516,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PressureLine
       objectReference: {fileID: 0}
+    - target: {fileID: 2273716832969232966, guid: 556a18cfda1dedb438b066c7f1abad98, type: 3}
+      propertyPath: m_SortingOrder
+      value: -25
+      objectReference: {fileID: 0}
     - target: {fileID: 4078318746528163280, guid: 556a18cfda1dedb438b066c7f1abad98, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

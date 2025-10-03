@@ -78,25 +78,25 @@ public class PressureLine : MonoBehaviour
     {
         if (resetP1Coroutine != null) StopCoroutine(resetP1Coroutine);
         resetP1Coroutine = StartCoroutine("ResetSlowPlayer1");
-        slowPlayer1.SetActive(true);
+        slowPlayer1.SetActive(false);
     }
 
     public void SetSlowPlayer2()
     {
         if (resetP2Coroutine != null) StopCoroutine(resetP2Coroutine);
         resetP2Coroutine = StartCoroutine("ResetSlowPlayer2");
-        slowPlayer2.SetActive(true);
+        slowPlayer2.SetActive(false);
     }
 
     IEnumerator ResetSlowPlayer1()
     {
         yield return new WaitForSeconds(slowDuration);
-        slowPlayer1.SetActive(false);
+        slowPlayer1.SetActive(true);
     }
 
     IEnumerator ResetSlowPlayer2()
     {
         yield return new WaitForSeconds(slowDuration);
-        slowPlayer2.SetActive(false);
+        slowPlayer2.SetActive(true);
     }
 }
