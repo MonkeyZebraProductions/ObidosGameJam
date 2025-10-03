@@ -1492,18 +1492,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1355106846}
     - target: {fileID: 6611551632927431598, guid: abe89d36da0c040418968d50fde888f3, type: 3}
-      propertyPath: playerSprites.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6611551632927431598, guid: abe89d36da0c040418968d50fde888f3, type: 3}
-      propertyPath: 'playerSprites.Array.data[0]'
-      value: 
-      objectReference: {fileID: -8112086744520682986, guid: 57b6bf854a2f0bd469dd0b7f5fc2666a, type: 3}
-    - target: {fileID: 6611551632927431598, guid: abe89d36da0c040418968d50fde888f3, type: 3}
-      propertyPath: 'playerSprites.Array.data[1]'
-      value: 
-      objectReference: {fileID: -6530188866573173129, guid: e5bb5ba3c5e80114c989cc5c8720ed6f, type: 3}
-    - target: {fileID: 6611551632927431598, guid: abe89d36da0c040418968d50fde888f3, type: 3}
       propertyPath: 'spawnPositions.Array.data[0]'
       value: 
       objectReference: {fileID: 1597629106}

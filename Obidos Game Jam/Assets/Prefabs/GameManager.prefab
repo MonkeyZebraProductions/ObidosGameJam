@@ -97,6 +97,9 @@ MonoBehaviour:
   spawnPositions:
   - {fileID: 0}
   - {fileID: 0}
+  playerSprites:
+  - {fileID: -8112086744520682986, guid: 57b6bf854a2f0bd469dd0b7f5fc2666a, type: 3}
+  - {fileID: -6530188866573173129, guid: e5bb5ba3c5e80114c989cc5c8720ed6f, type: 3}
 --- !u!114 &1891080073541796457
 MonoBehaviour:
   m_ObjectHideFlags: 0

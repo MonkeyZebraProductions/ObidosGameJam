@@ -21,7 +21,6 @@ public class PressureLineManager : MonoBehaviour
             if (pressureLine != null)
             {
                 pressureLine.moveDistance += MoveIncrement;
-                Debug.Log("Increase Movement");
                 currentTime = 0;
             }
         }
