@@ -6,6 +6,13 @@ public class PowerUpMovement : MonoBehaviour
     [SerializeField] private GameObject destroyEffectPrefab;
 
     private Vector3 direction = Vector3.zero;
+    private AudioManager audioManager;
+    [SerializeField] private string HitSoundName = "Powerup";
+
+    private void Start()
+    {
+        audioManager = FindFirstObjectByType<AudioManager>();
+    }
 
     public void SetDirection(string ballTag)
     {
@@ -32,6 +39,21 @@ public class PowerUpMovement : MonoBehaviour
     public void DestroyEffect()
     {
         Instantiate(destroyEffectPrefab, transform.position, Quaternion.identity);
+        if (audioManager != null) 
+        {
+            if (!audioManager.IsPlaying(HitSoundName))
+            {
+                audioManager.Play(HitSoundName);
+            }
+            else if (!audioManager.IsPlaying(HitSoundName + "1"))
+            {
+                audioManager.Play(HitSoundName + "1");
+            }
+            else if (!audioManager.IsPlaying(HitSoundName + "2"))
+            {
+                audioManager.Play(HitSoundName + "2");
+            }
+        }
         Destroy(gameObject);
     }
 }

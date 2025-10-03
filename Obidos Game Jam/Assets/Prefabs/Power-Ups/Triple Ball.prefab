@@ -189,6 +189,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PowerUpMovement
   speed: 3
   destroyEffectPrefab: {fileID: 2966490726586985338, guid: 5ac9968ea8af5104f9fc7636bcb36207, type: 3}
+  HitSoundName: Powerup
 --- !u!1001 &6624549401997715343
 PrefabInstance:
   m_ObjectHideFlags: 0
