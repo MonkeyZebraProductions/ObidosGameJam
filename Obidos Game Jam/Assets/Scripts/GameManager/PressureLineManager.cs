@@ -6,6 +6,7 @@ public class PressureLineManager : MonoBehaviour
     [SerializeField] float MoveIncrement = 1;
     [SerializeField] PressureLine pressureLine;
     float currentTime;
+    public bool countdown;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -15,13 +16,16 @@ public class PressureLineManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        currentTime += Time.deltaTime;
-        if (currentTime > TimeIncrement)
+        if(countdown)
         {
-            if (pressureLine != null)
+            currentTime += Time.deltaTime;
+            if (currentTime > TimeIncrement)
             {
-                pressureLine.moveDistance += MoveIncrement;
-                currentTime = 0;
+                if (pressureLine != null)
+                {
+                    pressureLine.moveDistance += MoveIncrement;
+                    currentTime = 0;
+                }
             }
         }
     }

@@ -25,6 +25,7 @@ public class PlayerInputManager : MonoBehaviour
     private BlockSpawner blockSpawner;
     private StartScreenCountdown startScreenCountdown;
     private AudioManager audioManager;
+    private PressureLineManager pressureLineManager;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -32,6 +33,7 @@ public class PlayerInputManager : MonoBehaviour
         spawnBalls = GetComponentInParent<SpawnBalls>();
         blockSpawner = GetComponentInParent<BlockSpawner>();
         audioManager = GetComponentInParent<AudioManager>();
+        pressureLineManager = GetComponentInParent<PressureLineManager>();
         startScreenCountdown = FindFirstObjectByType<StartScreenCountdown>();
         startScreenCountdown.gameObject.SetActive(false);
         if (audioManager != null)
@@ -59,6 +61,15 @@ public class PlayerInputManager : MonoBehaviour
         else
         {
             Debug.LogError("Block Spawner Not Valid");
+        }
+
+        if(pressureLineManager != null)
+        {
+            pressureLineManager.countdown = true;
+        }
+        else
+        {
+            Debug.LogError("Pressure Line Manager Not Valid");
         }
 
     }
