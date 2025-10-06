@@ -64,7 +64,7 @@ public class BlockSpawner : MonoBehaviour
     {
         for(var y = 0; y < GridHeight; y++)
         {
-            Vector2 spawnPos = grid.GetWorldPosition(p2 ? GridWidth - 1 : 0, y) + new Vector2(cellSize / 2, cellSize / 2);
+            Vector2 spawnPos = grid.GetWorldPosition(p2 ? 0 : GridWidth - 1, y) + new Vector2(cellSize / 2, cellSize / 2);
             var prefabGO = Instantiate(block, spawnPos, Quaternion.identity);
         }
     }
